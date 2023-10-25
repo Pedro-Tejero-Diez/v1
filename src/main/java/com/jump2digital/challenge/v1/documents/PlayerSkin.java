@@ -24,6 +24,7 @@ public class PlayerSkin {
 
     public PlayerSkin(Skin playerSkin) {
         this.playerSkin = playerSkin;
+        this.regdate= LocalDate.now();
     }
 }
 

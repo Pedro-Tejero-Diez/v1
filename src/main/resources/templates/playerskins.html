@@ -27,18 +27,14 @@
             </thead>
             <tbody>
             <tr th:each="PlayerSkin : ${playerskins}">
-                <td th:text="${PlayerSkin.player_skin_id}"></td>
-                <td th:text="${PlayerSkin.name}"></td>
-                <td th:text="${PlayerSkin.description}"></td>
-                <td th:text="${PlayerSkin.author}"></td>
-                <td th:text="${PlayerSkin.price}"></td>
-                <td th:text="${PlayerSkin.color}"></td>
-                <td> <a class="btn btn-primary" th:href="@{/skins/getskin/{id} (id=${playerskin.id})}"
+                <td th:text="${PlayerSkin.playerSkin.name}"></td>
+                <td th:text="${PlayerSkin.playerSkin.description}"></td>
+                <td th:text="${PlayerSkin.playerSkin.author}"></td>
+                <td th:text="${PlayerSkin.playerSkin.color}"></td>
+                <td> <a class="btn btn-primary" th:href="@{/skins/getskin/{id} (id=${PlayerSkin.player_skin_id})}"
                         th:object="${playerskins}">Select</a>
                 </td>
-                <td> <a class="btn btn-primary" th:href="@{/skins/delete{id} (id=${playerskin.id})}}"
-                        th:object="${Skin}">Delete</a>
-                </td>
+
         </table>
 
     </div>

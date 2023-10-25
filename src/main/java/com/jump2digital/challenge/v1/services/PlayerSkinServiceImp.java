@@ -8,10 +8,10 @@ import java.util.Optional;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+
+import com.jump2digital.challenge.v1.documents.PlayerSkin;
 import com.jump2digital.challenge.v1.documents.Skin;
 import com.jump2digital.challenge.v1.repository.PlayerSkinRepository;
-import com.jump2digital.challenge.v1.documents.PlayerSkin;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
@@ -38,13 +38,19 @@ public class PlayerSkinServiceImp implements PlayerSkinService {
     }
 
 
-/*
+
     @Override
     public List<PlayerSkin> getAllPlayerSkin() {
 
         return playerskinrepository.findAll();
     }
 
+    @Override
+    public Optional<PlayerSkin> getPlayerSkinById(String id) {
+        return playerskinrepository.findById(id);
+
+    }
+/*
     @Override
     public List<PlayerSkin> getAllPlayerSkinByPlayer(String player_id) {
 

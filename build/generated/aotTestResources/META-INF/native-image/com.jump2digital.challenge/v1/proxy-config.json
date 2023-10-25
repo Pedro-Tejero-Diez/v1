@@ -1,0 +1,21 @@
+[
+  {
+    "interfaces": [
+      "com.mongodb.client.MongoDatabase",
+      "org.springframework.aop.SpringProxy",
+      "org.springframework.core.DecoratingProxy"
+    ]
+  },
+  {
+    "interfaces": [
+      "com.mongodb.client.MongoCollection",
+      "org.springframework.aop.SpringProxy",
+      "org.springframework.core.DecoratingProxy"
+    ]
+  },
+  {
+    "interfaces": [
+      "org.springframework.data.annotation.QueryAnnotation"
+    ]
+  }
+]

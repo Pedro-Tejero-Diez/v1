@@ -1,0 +1,83 @@
+
+[
+  {
+    "id": 1,
+    "name": "Sleek Silver Sentinel",
+    "description": "A futuristic silver armor for high-tech battles.",
+    "author": "FuturisticDesigns",
+    "price": 600,
+    "color": "Silver"
+  },
+  {
+    "id": 2,
+    "name": "Arctic partic",
+    "description": "Icy blue attire for North polar adventures.",
+    "author": "FrozenAdventures",
+    "price": 550,
+    "color": "Icy Blue"
+  },
+  {
+    "id": 3,
+    "name": "Antartic Explorer",
+    "description": "Icy blue attire for Antartic adventures.",
+    "author": "FrozenAdventures",
+    "price": 550,
+    "color": "Icy Blueish"
+  },
+  {
+    "id":4,
+    "name": "Neon Ninja",
+    "description": "A neon-clad ninja for the urban jungle.",
+    "author": "UrbanShadow",
+    "price": 800,
+    "color": "Neon Green"
+  },
+  {
+    "id": 5,
+    "name": "Golden Guardian",
+    "description": "A shining gold guardian to protect the realm.",
+    "author": "RealmProtectors",
+    "price": 750,
+    "color": "Gold"
+  },
+  {
+    "id": 6,
+    "name": "Desert Nomad",
+    "description": "Camouflaged attire for surviving the harshest deserts.",
+    "author": "DesertSurvivor",
+    "price": 600,
+    "color": "Tan and Brown"
+  },
+  {
+    "id": 7,
+    "name": "Aqua Explorer",
+    "description": "Dive into the depths with this aquatic explorer suit.",
+    "author": "UnderwaterAdventures",
+    "price": 900,
+    "color": "Aqua Blue"
+  },
+  {
+    "id": 8,
+    "name": "Space Pirate",
+    "description": "A swashbuckling space pirate outfit for interstellar adventures.",
+    "author": "CosmicPirates",
+    "price": 650,
+    "color": "Black and Red"
+  },
+  {
+    "id": 9,
+    "name": "Emerald Enchantress",
+    "description": "An enchanting emerald green robe for mystical powers.",
+    "author": "MysticMagicGuild",
+    "price": 850,
+    "color": "Emerald Green"
+  },
+  {
+    "id": 10,
+    "name": "Galactic Explorer",
+    "description": "An astronaut exploring the galaxy.",
+    "author": "GalaxyExplorersInc",
+    "price": 900,
+    "color": "Silver"
+  }
+]

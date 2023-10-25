@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>jump2digital</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+<body>
+<div class="container my-4">
+    <h1>GAME SKINS</h1>
+    <hr>
+
+    <div class="container my-4">
+        <br class="row">
+        <table border="1" class="table table-striped table-bordered">
+            <thead class="thead-dark">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Author</th>
+                <th>Price</th>
+                <th>Color</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="PlayerSkin : ${playerskins}">
+                <td th:text="${PlayerSkin.player_skin_id}"></td>
+                <td th:text="${PlayerSkin.name}"></td>
+                <td th:text="${PlayerSkin.description}"></td>
+                <td th:text="${PlayerSkin.author}"></td>
+                <td th:text="${PlayerSkin.price}"></td>
+                <td th:text="${PlayerSkin.color}"></td>
+                <td> <a class="btn btn-primary" th:href="@{/skins/getskin/{id} (id=${playerskin.id})}"
+                        th:object="${playerskins}">Select</a>
+                </td>
+                <td> <a class="btn btn-primary" th:href="@{/skins/delete{id} (id=${playerskin.id})}}"
+                        th:object="${Skin}">Delete</a>
+                </td>
+        </table>
+
+    </div>
+</body>
+
+</html>

@@ -42,52 +42,37 @@ public class PlayerSkinController {
         return "playerskins";
     }
 
-    @GetMapping("getskin/{skin_id}")
-    public String playerskinsscreen(@PathVariable("player_skin_id") String id,
+    @GetMapping("getskin/{id}")
+    public String playerskinsscreen(@PathVariable("id") String id,
                                     Model model) {
         Optional<PlayerSkin> playerskin = playerskinservice.getPlayerSkinById(id);
         if (playerskin.isPresent()) {
-        model. addAttribute("playerskin",playerskin);
-        model.addAttribute("skin", playerskin.get().getPlayerSkin());
-        return "playerskin";
-    } else return "not_found";
+            model.addAttribute("playerskin", playerskin.get());
+            model.addAttribute("skin", playerskin.get().getPlayerSkin());
+            return "playerskin";
+        } else return "not_found";
     }
+    @GetMapping("color/{id}")
+    public String getColor(@PathVariable(value = "id")
+                              String player_skin_id, Model model) {
 
-/*
-}
-
-        @GetMapping("/myskins")
-        public String playerSkins(@PathVariable(value = "player_id")
-                                  String player_id, Model model) {
-
-            try {
-                List<PlayerSkin> playerskin.html = playerskinservice
-                        .getAllPlayerSkinByPlayer(player_id);
-
-                    model.addAttribute("playerskin.html", playerskin.html);
-
-                    return "player";
-                } else
-                    return "no_encontrado";
-            } catch (Exception e) {
-                return "error";
-            }
-        }
+        return "redirect:/skins/color";
     }
+    @PutMapping("color/{id}")
+    public String changeColor(@PathVariable(value = "player_id")
+                              String player_id, Model model) {
 
-
-    // esto es el redirect que use para hacer una nueva jugada y guardarla
-     * @PostMapping("/{player_id}/myskins")
-    public String playerSkins(@PathVariable(value = "player_id") String player_id,
-                              RedirectAttributes ra, Model model) {
-
-            if (service.getPlayerById(player_id)!=null) {
-                List<PlayerSkin> playerskin.html =  playerskinservice
-                		.getAllPlayerSkinByPlayer(player_id);
-            ra.addFlashAttribute("playerskin.html",playerskin.html);
-            return "redirect:/Skins/{player_id}/playerskins";
-            } else return "error";
-
-    }*/
+        return "color";
+    }
+    @GetMapping("delete/{id}")
+    public String getSkinToDelete(@PathVariable(value = "player_id")
+                                    String player_id, Model model) {
+        return "delete";
+    }
+    @DeleteMapping("delete/{id}")
+    public String deletePlayerSkins(@PathVariable(value = "player_id")
+                                    String player_id, Model model) {
+        return "delete";
+    }
 
 }

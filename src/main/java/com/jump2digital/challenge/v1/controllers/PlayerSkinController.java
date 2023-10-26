@@ -52,13 +52,15 @@ public class PlayerSkinController {
             return "playerskin";
         } else return "not_found";
     }
-    @GetMapping("color/{id}")
-    public String getColor(@PathVariable(value = "id")
-                              String player_skin_id, Model model) {
+    @GetMapping("color")
+    public String getColor(@PathVariable("id") String player_skin_id,
+                           @ModelAttribute("NewColor") String newcolor, Model model) {
 
-        return "redirect:/skins/color";
+        playerskinservice.getPlayerSkinById(player_skin_id).get().getPlayerSkin().setColor(newcolor);
+
+        return "playerskins";
     }
-    @PutMapping("color/{id}")
+    @PostMapping("color/{id}")
     public String changeColor(@PathVariable(value = "player_id")
                               String player_id, Model model) {
 

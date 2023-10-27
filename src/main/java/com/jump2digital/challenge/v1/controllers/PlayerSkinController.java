@@ -7,9 +7,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Optional;
 
 @Controller
@@ -52,29 +54,22 @@ public class PlayerSkinController {
             return "playerskin";
         } else return "not_found";
     }
-    @GetMapping("color")
-    public String getColor(@PathVariable("id") String player_skin_id,
-                           @ModelAttribute("NewColor") String newcolor, Model model) {
 
-        playerskinservice.getPlayerSkinById(player_skin_id).get().getPlayerSkin().setColor(newcolor);
-
-        return "playerskins";
-    }
     @PostMapping("color/{id}")
-    public String changeColor(@PathVariable(value = "player_id")
-                              String player_id, Model model) {
-
-        return "color";
+    public String changeColor(@PathVariable(value = "id")
+                              String player_skin_id,
+                              @ModelAttribute("newColor") String newcolor,
+                              Model model) {
+        playerskinservice.updatePlayerSkinColor(player_skin_id, newcolor);
+        return "success";
     }
+
     @GetMapping("delete/{id}")
-    public String getSkinToDelete(@PathVariable(value = "player_id")
-                                    String player_id, Model model) {
-        return "delete";
-    }
-    @DeleteMapping("delete/{id}")
-    public String deletePlayerSkins(@PathVariable(value = "player_id")
-                                    String player_id, Model model) {
-        return "delete";
-    }
+    public String getSkinToDelete(@PathVariable(value = "id")
+                                  String player_skin_id) {
 
+        playerskinservice.deletePlayerSkin(player_skin_id);
+
+        return "success";
+    }
 }

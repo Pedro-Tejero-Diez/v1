@@ -13,15 +13,13 @@ public interface PlayerSkinService {
     List<PlayerSkin> getAllPlayerSkin();
 
     Optional<PlayerSkin> getPlayerSkinById(String id);
-/*
+
+    void savePlayerSkin(PlayerSkin playerskin);
+
+
     void deletePlayerSkin(String playerSkin_id);
 
-    void savePlayerSkin(PlayerSkin playerSkin);
+    public PlayerSkin updatePlayerSkinColor(String playerSkinId, String newColor);
 
-    List<PlayerSkin> getAllPlayerSkinByPlayer(String player_id);
-
-    // void deletePlayerSkin(String playerSkin_id);
-
-*/
 }
 

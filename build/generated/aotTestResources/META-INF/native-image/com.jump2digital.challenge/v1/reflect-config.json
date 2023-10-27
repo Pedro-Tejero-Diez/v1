@@ -1,5 +1,8 @@
 [
   {
+    "name": "java.lang.reflect.AccessibleObject"
+  },
+  {
     "name": "org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration",
     "queryAllDeclaredMethods": true,
     "queriedMethods": [
@@ -11,6 +14,32 @@
         "name": "platformTransactionManagerCustomizers",
         "parameterTypes": [
           "org.springframework.beans.factory.ObjectProvider"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "org.springframework.data.mongodb.repository.support.MongoRepositoryFactoryBean",
+    "queryAllDeclaredMethods": true,
+    "methods": [
+      {
+        "name": "setCreateIndexesForQueryMethods",
+        "parameterTypes": [
+          "boolean"
+        ]
+      },
+      {
+        "name": "setMongoOperations",
+        "parameterTypes": [
+          "org.springframework.data.mongodb.core.MongoOperations"
+        ]
+      }
+    ],
+    "queriedMethods": [
+      {
+        "name": "<init>",
+        "parameterTypes": [
+          "java.lang.Class"
         ]
       }
     ]
@@ -52,14 +81,14 @@
         "parameterTypes": [ ]
       },
       {
+        "name": "requestContextFilter",
+        "parameterTypes": [ ]
+      },
+      {
         "name": "viewResolver",
         "parameterTypes": [
           "org.springframework.beans.factory.BeanFactory"
         ]
-      },
-      {
-        "name": "requestContextFilter",
-        "parameterTypes": [ ]
       }
     ]
   },
@@ -71,7 +100,7 @@
         "parameterTypes": [ ]
       },
       {
-        "name": "getH2cMaxContentLength",
+        "name": "isValidateHeaders",
         "parameterTypes": [ ]
       },
       {
@@ -81,27 +110,7 @@
         ]
       },
       {
-        "name": "setMaxChunkSize",
-        "parameterTypes": [
-          "org.springframework.util.unit.DataSize"
-        ]
-      },
-      {
-        "name": "getMaxInitialLineLength",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "setH2cMaxContentLength",
-        "parameterTypes": [
-          "org.springframework.util.unit.DataSize"
-        ]
-      },
-      {
-        "name": "getMaxKeepAliveRequests",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getIdleTimeout",
+        "name": "getMaxChunkSize",
         "parameterTypes": [ ]
       },
       {
@@ -115,28 +124,38 @@
         "parameterTypes": [ ]
       },
       {
-        "name": "getMaxChunkSize",
+        "name": "getH2cMaxContentLength",
         "parameterTypes": [ ]
       },
       {
-        "name": "setMaxInitialLineLength",
-        "parameterTypes": [
-          "org.springframework.util.unit.DataSize"
-        ]
-      },
-      {
-        "name": "setValidateHeaders",
-        "parameterTypes": [
-          "boolean"
-        ]
-      },
-      {
-        "name": "isValidateHeaders",
+        "name": "getMaxKeepAliveRequests",
         "parameterTypes": [ ]
       },
       {
         "name": "getInitialBufferSize",
         "parameterTypes": [ ]
+      },
+      {
+        "name": "setConnectionTimeout",
+        "parameterTypes": [
+          "java.time.Duration"
+        ]
+      },
+      {
+        "name": "getIdleTimeout",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setH2cMaxContentLength",
+        "parameterTypes": [
+          "org.springframework.util.unit.DataSize"
+        ]
+      },
+      {
+        "name": "setMaxChunkSize",
+        "parameterTypes": [
+          "org.springframework.util.unit.DataSize"
+        ]
       },
       {
         "name": "setInitialBufferSize",
@@ -145,9 +164,19 @@
         ]
       },
       {
-        "name": "setConnectionTimeout",
+        "name": "getMaxInitialLineLength",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setValidateHeaders",
         "parameterTypes": [
-          "java.time.Duration"
+          "boolean"
+        ]
+      },
+      {
+        "name": "setMaxInitialLineLength",
+        "parameterTypes": [
+          "org.springframework.util.unit.DataSize"
         ]
       }
     ]
@@ -208,18 +237,18 @@
         ]
       },
       {
+        "name": "setAlias",
+        "parameterTypes": [
+          "java.lang.String"
+        ]
+      },
+      {
         "name": "getAlias",
         "parameterTypes": [ ]
       },
       {
         "name": "getPassword",
         "parameterTypes": [ ]
-      },
-      {
-        "name": "setAlias",
-        "parameterTypes": [
-          "java.lang.String"
-        ]
       }
     ]
   },
@@ -255,13 +284,31 @@
         "parameterTypes": [ ]
       },
       {
-        "name": "setUseRelativeRedirects",
+        "name": "getAdditionalTldSkipPatterns",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getMaxSwallowSize",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setBasedir",
         "parameterTypes": [
-          "boolean"
+          "java.io.File"
         ]
       },
       {
-        "name": "getProcessorCache",
+        "name": "setMaxHttpFormPostSize",
+        "parameterTypes": [
+          "org.springframework.util.unit.DataSize"
+        ]
+      },
+      {
+        "name": "getConnectionTimeout",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getBasedir",
         "parameterTypes": [ ]
       },
       {
@@ -275,99 +322,23 @@
         "parameterTypes": [ ]
       },
       {
-        "name": "setMaxHttpFormPostSize",
+        "name": "setRejectIllegalHeader",
         "parameterTypes": [
-          "org.springframework.util.unit.DataSize"
+          "boolean"
         ]
       },
       {
-        "name": "setMaxSwallowSize",
+        "name": "getKeepAliveTimeout",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setAdditionalTldSkipPatterns",
         "parameterTypes": [
-          "org.springframework.util.unit.DataSize"
-        ]
-      },
-      {
-        "name": "getConnectionTimeout",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getBackgroundProcessorDelay",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getThreads",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getMaxConnections",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "setProcessorCache",
-        "parameterTypes": [
-          "int"
-        ]
-      },
-      {
-        "name": "setConnectionTimeout",
-        "parameterTypes": [
-          "java.time.Duration"
-        ]
-      },
-      {
-        "name": "setKeepAliveTimeout",
-        "parameterTypes": [
-          "java.time.Duration"
-        ]
-      },
-      {
-        "name": "setBasedir",
-        "parameterTypes": [
-          "java.io.File"
-        ]
-      },
-      {
-        "name": "getMaxSwallowSize",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "setMaxKeepAliveRequests",
-        "parameterTypes": [
-          "int"
-        ]
-      },
-      {
-        "name": "isUseRelativeRedirects",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getUriEncoding",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getAdditionalTldSkipPatterns",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getBasedir",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getMaxKeepAliveRequests",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "setRedirectContextRoot",
-        "parameterTypes": [
-          "java.lang.Boolean"
+          "java.util.List"
         ]
       },
       {
         "name": "getAcceptCount",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getMaxHttpResponseHeaderSize",
         "parameterTypes": [ ]
       },
       {
@@ -377,8 +348,10 @@
         ]
       },
       {
-        "name": "getAccesslog",
-        "parameterTypes": [ ]
+        "name": "setMaxHttpResponseHeaderSize",
+        "parameterTypes": [
+          "org.springframework.util.unit.DataSize"
+        ]
       },
       {
         "name": "setBackgroundProcessorDelay",
@@ -387,26 +360,44 @@
         ]
       },
       {
-        "name": "setMaxConnections",
+        "name": "setMaxKeepAliveRequests",
         "parameterTypes": [
           "int"
         ]
       },
       {
-        "name": "setRelaxedPathChars",
-        "parameterTypes": [
-          "java.util.List"
-        ]
-      },
-      {
-        "name": "setAdditionalTldSkipPatterns",
-        "parameterTypes": [
-          "java.util.List"
-        ]
-      },
-      {
-        "name": "getResource",
+        "name": "getRedirectContextRoot",
         "parameterTypes": [ ]
+      },
+      {
+        "name": "getMaxConnections",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getRelaxedQueryChars",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getMaxKeepAliveRequests",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getProcessorCache",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "isUseRelativeRedirects",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getBackgroundProcessorDelay",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setUseRelativeRedirects",
+        "parameterTypes": [
+          "boolean"
+        ]
       },
       {
         "name": "getMaxHttpFormPostSize",
@@ -417,42 +408,117 @@
         "parameterTypes": [ ]
       },
       {
+        "name": "getMaxHttpResponseHeaderSize",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setMaxConnections",
+        "parameterTypes": [
+          "int"
+        ]
+      },
+      {
+        "name": "getUriEncoding",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getThreads",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setRedirectContextRoot",
+        "parameterTypes": [
+          "java.lang.Boolean"
+        ]
+      },
+      {
+        "name": "getAccesslog",
+        "parameterTypes": [ ]
+      },
+      {
         "name": "setUriEncoding",
         "parameterTypes": [
           "java.nio.charset.Charset"
         ]
       },
       {
-        "name": "setRejectIllegalHeader",
+        "name": "getMbeanregistry",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setKeepAliveTimeout",
         "parameterTypes": [
-          "boolean"
+          "java.time.Duration"
         ]
       },
       {
-        "name": "setMaxHttpResponseHeaderSize",
+        "name": "getResource",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setMaxSwallowSize",
         "parameterTypes": [
           "org.springframework.util.unit.DataSize"
         ]
       },
       {
-        "name": "getRelaxedQueryChars",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getRedirectContextRoot",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getMbeanregistry",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getKeepAliveTimeout",
-        "parameterTypes": [ ]
+        "name": "setConnectionTimeout",
+        "parameterTypes": [
+          "java.time.Duration"
+        ]
       },
       {
         "name": "getRemoteip",
         "parameterTypes": [ ]
+      },
+      {
+        "name": "setProcessorCache",
+        "parameterTypes": [
+          "int"
+        ]
+      },
+      {
+        "name": "setRelaxedPathChars",
+        "parameterTypes": [
+          "java.util.List"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "com.jump2digital.challenge.v1.documents.PlayerSkin",
+    "allDeclaredConstructors": true,
+    "allDeclaredFields": true,
+    "methods": [
+      {
+        "name": "getPlayer_skin_id",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setPlayer_skin_id",
+        "parameterTypes": [
+          "java.lang.String"
+        ]
+      },
+      {
+        "name": "getPlayerSkin",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getRegdate",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setRegdate",
+        "parameterTypes": [
+          "java.time.LocalDate"
+        ]
+      },
+      {
+        "name": "setPlayerSkin",
+        "parameterTypes": [
+          "com.jump2digital.challenge.v1.documents.Skin"
+        ]
       }
     ]
   },
@@ -462,9 +528,9 @@
   },
   {
     "name": "org.springframework.data.projection.SpelEvaluatingMethodInterceptor$TargetWrapper",
-    "allPublicMethods": true,
+    "allDeclaredMethods": true,
     "allDeclaredConstructors": true,
-    "allDeclaredMethods": true
+    "allPublicMethods": true
   },
   {
     "name": "org.springframework.validation.Validator",
@@ -500,25 +566,25 @@
     "name": "com.fasterxml.jackson.databind.PropertyNamingStrategies",
     "fields": [
       {
-        "name": "SNAKE_CASE"
-      },
-      {
-        "name": "UPPER_SNAKE_CASE"
-      },
-      {
         "name": "LOWER_CAMEL_CASE"
-      },
-      {
-        "name": "LOWER_DOT_CASE"
-      },
-      {
-        "name": "KEBAB_CASE"
       },
       {
         "name": "LOWER_CASE"
       },
       {
+        "name": "UPPER_SNAKE_CASE"
+      },
+      {
+        "name": "KEBAB_CASE"
+      },
+      {
+        "name": "SNAKE_CASE"
+      },
+      {
         "name": "UPPER_CAMEL_CASE"
+      },
+      {
+        "name": "LOWER_DOT_CASE"
       }
     ]
   },
@@ -559,6 +625,62 @@
     "allDeclaredConstructors": true
   },
   {
+    "name": "com.jump2digital.challenge.v1.controllers.PlayerSkinController",
+    "queryAllDeclaredMethods": true,
+    "fields": [
+      {
+        "name": "playerskinservice"
+      }
+    ],
+    "methods": [
+      {
+        "name": "playerskinsscreen",
+        "parameterTypes": [
+          "org.springframework.ui.Model"
+        ]
+      },
+      {
+        "name": "changeColor",
+        "parameterTypes": [
+          "java.lang.String",
+          "java.lang.String",
+          "org.springframework.ui.Model"
+        ]
+      },
+      {
+        "name": "getSkinToDelete",
+        "parameterTypes": [
+          "java.lang.String"
+        ]
+      },
+      {
+        "name": "playerskinsscreen",
+        "parameterTypes": [
+          "java.lang.String",
+          "org.springframework.ui.Model"
+        ]
+      },
+      {
+        "name": "butSkinPlayer",
+        "parameterTypes": [
+          "java.lang.String"
+        ]
+      },
+      {
+        "name": "listSkins",
+        "parameterTypes": [
+          "org.springframework.ui.Model"
+        ]
+      }
+    ],
+    "queriedMethods": [
+      {
+        "name": "<init>",
+        "parameterTypes": [ ]
+      }
+    ]
+  },
+  {
     "name": "org.springframework.boot.jdbc.init.DataSourceScriptDatabaseInitializerDetector",
     "allDeclaredConstructors": true
   },
@@ -579,6 +701,22 @@
     "allDeclaredMethods": true
   },
   {
+    "name": "com.jump2digital.challenge.v1.TestMongoConfig",
+    "allDeclaredMethods": true,
+    "queryAllDeclaredMethods": true,
+    "allPublicMethods": true,
+    "queriedMethods": [
+      {
+        "name": "<init>",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "mongoTemplate",
+        "parameterTypes": [ ]
+      }
+    ]
+  },
+  {
     "name": "org.springframework.boot.autoconfigure.websocket.servlet.WebSocketServletAutoConfiguration",
     "queryAllDeclaredMethods": true,
     "queriedMethods": [
@@ -587,6 +725,11 @@
         "parameterTypes": [ ]
       }
     ]
+  },
+  {
+    "name": "org.springframework.data.domain.ExampleMatcher$PropertyValueTransformer",
+    "allDeclaredConstructors": true,
+    "allDeclaredFields": true
   },
   {
     "name": "org.springframework.boot.autoconfigure.availability.ApplicationAvailabilityAutoConfiguration",
@@ -660,45 +803,9 @@
         "parameterTypes": [ ]
       },
       {
-        "name": "setRenderHiddenMarkersBeforeCheckboxes",
+        "name": "setExcludedViewNames",
         "parameterTypes": [
-          "boolean"
-        ]
-      },
-      {
-        "name": "setCheckTemplateLocation",
-        "parameterTypes": [
-          "boolean"
-        ]
-      },
-      {
-        "name": "setMode",
-        "parameterTypes": [
-          "java.lang.String"
-        ]
-      },
-      {
-        "name": "getServlet",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "setEnableSpringElCompiler",
-        "parameterTypes": [
-          "boolean"
-        ]
-      },
-      {
-        "name": "getExcludedViewNames",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "isEnabled",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "setCheckTemplate",
-        "parameterTypes": [
-          "boolean"
+          "java.lang.String[]"
         ]
       },
       {
@@ -706,17 +813,17 @@
         "parameterTypes": [ ]
       },
       {
-        "name": "setViewNames",
-        "parameterTypes": [
-          "java.lang.String[]"
-        ]
-      },
-      {
         "name": "isEnableSpringElCompiler",
         "parameterTypes": [ ]
       },
       {
-        "name": "isCheckTemplateLocation",
+        "name": "setCache",
+        "parameterTypes": [
+          "boolean"
+        ]
+      },
+      {
+        "name": "getEncoding",
         "parameterTypes": [ ]
       },
       {
@@ -726,43 +833,27 @@
         ]
       },
       {
-        "name": "setCache",
+        "name": "isCheckTemplateLocation",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setRenderHiddenMarkersBeforeCheckboxes",
         "parameterTypes": [
           "boolean"
         ]
       },
       {
-        "name": "setEnabled",
+        "name": "isEnabled",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setCheckTemplateLocation",
         "parameterTypes": [
           "boolean"
         ]
       },
       {
-        "name": "isCheckTemplate",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getReactive",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getTemplateResolverOrder",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getMode",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getEncoding",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "isRenderHiddenMarkersBeforeCheckboxes",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getSuffix",
+        "name": "getServlet",
         "parameterTypes": [ ]
       },
       {
@@ -770,13 +861,19 @@
         "parameterTypes": [ ]
       },
       {
-        "name": "setEncoding",
-        "parameterTypes": [
-          "java.nio.charset.Charset"
-        ]
+        "name": "getExcludedViewNames",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "isRenderHiddenMarkersBeforeCheckboxes",
+        "parameterTypes": [ ]
       },
       {
         "name": "isCache",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getSuffix",
         "parameterTypes": [ ]
       },
       {
@@ -786,15 +883,61 @@
         ]
       },
       {
-        "name": "setExcludedViewNames",
+        "name": "setEnabled",
+        "parameterTypes": [
+          "boolean"
+        ]
+      },
+      {
+        "name": "getReactive",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setViewNames",
         "parameterTypes": [
           "java.lang.String[]"
+        ]
+      },
+      {
+        "name": "getTemplateResolverOrder",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setMode",
+        "parameterTypes": [
+          "java.lang.String"
         ]
       },
       {
         "name": "setPrefix",
         "parameterTypes": [
           "java.lang.String"
+        ]
+      },
+      {
+        "name": "setEnableSpringElCompiler",
+        "parameterTypes": [
+          "boolean"
+        ]
+      },
+      {
+        "name": "isCheckTemplate",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getMode",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setEncoding",
+        "parameterTypes": [
+          "java.nio.charset.Charset"
+        ]
+      },
+      {
+        "name": "setCheckTemplate",
+        "parameterTypes": [
+          "boolean"
         ]
       }
     ]
@@ -819,11 +962,17 @@
         "parameterTypes": [ ]
       },
       {
-        "name": "isEnabled",
+        "name": "getDir",
         "parameterTypes": [ ]
       },
       {
-        "name": "getSuffix",
+        "name": "setDir",
+        "parameterTypes": [
+          "java.io.File"
+        ]
+      },
+      {
+        "name": "isEnabled",
         "parameterTypes": [ ]
       },
       {
@@ -833,21 +982,23 @@
         ]
       },
       {
-        "name": "setPattern",
+        "name": "setSuffix",
         "parameterTypes": [
           "java.lang.String"
         ]
       },
       {
-        "name": "setDir",
-        "parameterTypes": [
-          "java.io.File"
-        ]
+        "name": "getSuffix",
+        "parameterTypes": [ ]
       },
       {
-        "name": "setEnabled",
+        "name": "getPattern",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setPattern",
         "parameterTypes": [
-          "boolean"
+          "java.lang.String"
         ]
       },
       {
@@ -857,26 +1008,18 @@
         ]
       },
       {
-        "name": "getDir",
-        "parameterTypes": [ ]
-      },
-      {
         "name": "getPrefix",
         "parameterTypes": [ ]
       },
       {
+        "name": "setEnabled",
+        "parameterTypes": [
+          "boolean"
+        ]
+      },
+      {
         "name": "isRotate",
         "parameterTypes": [ ]
-      },
-      {
-        "name": "getPattern",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "setSuffix",
-        "parameterTypes": [
-          "java.lang.String"
-        ]
       }
     ]
   },
@@ -915,10 +1058,36 @@
     "name": "org.springframework.boot.web.embedded.tomcat.TomcatProtocolHandlerCustomizer[]"
   },
   {
+    "name": "org.springframework.stereotype.Indexed",
+    "allDeclaredConstructors": true,
+    "allDeclaredFields": true,
+    "queryAllPublicMethods": true
+  },
+  {
     "name": "org.springframework.boot.autoconfigure.web.ServerProperties$Jetty$Accesslog",
     "methods": [
       {
         "name": "<init>",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getCustomFormat",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setFilename",
+        "parameterTypes": [
+          "java.lang.String"
+        ]
+      },
+      {
+        "name": "setRetentionPeriod",
+        "parameterTypes": [
+          "int"
+        ]
+      },
+      {
+        "name": "getIgnorePaths",
         "parameterTypes": [ ]
       },
       {
@@ -928,10 +1097,38 @@
         ]
       },
       {
-        "name": "setRetentionPeriod",
+        "name": "getRetentionPeriod",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setFormat",
         "parameterTypes": [
-          "int"
+          "org.springframework.boot.autoconfigure.web.ServerProperties$Jetty$Accesslog$FORMAT"
         ]
+      },
+      {
+        "name": "getFormat",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setCustomFormat",
+        "parameterTypes": [
+          "java.lang.String"
+        ]
+      },
+      {
+        "name": "setAppend",
+        "parameterTypes": [
+          "boolean"
+        ]
+      },
+      {
+        "name": "isAppend",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getFilename",
+        "parameterTypes": [ ]
       },
       {
         "name": "setIgnorePaths",
@@ -950,56 +1147,8 @@
         "parameterTypes": [ ]
       },
       {
-        "name": "getFormat",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getFilename",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "isAppend",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "setFilename",
-        "parameterTypes": [
-          "java.lang.String"
-        ]
-      },
-      {
         "name": "getFileDateFormat",
         "parameterTypes": [ ]
-      },
-      {
-        "name": "getIgnorePaths",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getRetentionPeriod",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getCustomFormat",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "setFormat",
-        "parameterTypes": [
-          "org.springframework.boot.autoconfigure.web.ServerProperties$Jetty$Accesslog$FORMAT"
-        ]
-      },
-      {
-        "name": "setAppend",
-        "parameterTypes": [
-          "boolean"
-        ]
-      },
-      {
-        "name": "setCustomFormat",
-        "parameterTypes": [
-          "java.lang.String"
-        ]
       }
     ]
   },
@@ -1016,15 +1165,15 @@
         "parameterTypes": [ ]
       },
       {
-        "name": "sslBundleRegistry",
-        "parameterTypes": [
-          "java.util.List"
-        ]
-      },
-      {
         "name": "sslPropertiesSslBundleRegistrar",
         "parameterTypes": [
           "org.springframework.boot.autoconfigure.ssl.SslProperties"
+        ]
+      },
+      {
+        "name": "sslBundleRegistry",
+        "parameterTypes": [
+          "java.util.List"
         ]
       }
     ]
@@ -1061,6 +1210,9 @@
   {
     "name": "org.springframework.boot.web.client.RestTemplateBuilder",
     "queryAllDeclaredMethods": true
+  },
+  {
+    "name": "java.time.LocalDate"
   },
   {
     "name": "org.springframework.test.context.observation.MicrometerObservationRegistryTestExecutionListener",
@@ -1105,6 +1257,9 @@
     "allDeclaredConstructors": true
   },
   {
+    "name": "java.lang.Class"
+  },
+  {
     "name": "org.springframework.boot.logging.log4j2.Log4J2LoggingSystem$Factory",
     "allDeclaredConstructors": true
   },
@@ -1116,20 +1271,12 @@
         "parameterTypes": [ ]
       },
       {
-        "name": "setQueueCapacity",
-        "parameterTypes": [
-          "int"
-        ]
-      },
-      {
         "name": "getKeepAlive",
         "parameterTypes": [ ]
       },
       {
-        "name": "setCoreSize",
-        "parameterTypes": [
-          "int"
-        ]
+        "name": "getQueueCapacity",
+        "parameterTypes": [ ]
       },
       {
         "name": "setMaxSize",
@@ -1144,25 +1291,33 @@
         ]
       },
       {
+        "name": "getMaxSize",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setCoreSize",
+        "parameterTypes": [
+          "int"
+        ]
+      },
+      {
         "name": "setAllowCoreThreadTimeout",
         "parameterTypes": [
           "boolean"
         ]
       },
       {
-        "name": "getMaxSize",
-        "parameterTypes": [ ]
+        "name": "setQueueCapacity",
+        "parameterTypes": [
+          "int"
+        ]
       },
       {
-        "name": "getQueueCapacity",
+        "name": "getCoreSize",
         "parameterTypes": [ ]
       },
       {
         "name": "isAllowCoreThreadTimeout",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getCoreSize",
         "parameterTypes": [ ]
       }
     ]
@@ -1191,6 +1346,11 @@
   {
     "name": "org.springframework.boot.autoconfigure.groovy.template.GroovyTemplateAvailabilityProvider",
     "allDeclaredConstructors": true
+  },
+  {
+    "name": "org.springframework.data.domain.ExampleMatcher$StringMatcher",
+    "allDeclaredConstructors": true,
+    "allDeclaredFields": true
   },
   {
     "name": "org.springframework.boot.autoconfigure.web.ServerProperties$Undertow$Threads",
@@ -1226,6 +1386,22 @@
     "allDeclaredConstructors": true
   },
   {
+    "name": "org.springframework.data.domain.Sort$TypedSort",
+    "allDeclaredConstructors": true,
+    "allDeclaredFields": true,
+    "methods": [
+      {
+        "name": "isEmpty",
+        "parameterTypes": [ ]
+      }
+    ]
+  },
+  {
+    "name": "org.springframework.data.domain.ExampleMatcher$NullHandler",
+    "allDeclaredConstructors": true,
+    "allDeclaredFields": true
+  },
+  {
     "name": "org.springframework.test.context.ContextCustomizerFactory",
     "allDeclaredConstructors": true
   },
@@ -1237,8 +1413,16 @@
     "name": "java.lang.Class[]"
   },
   {
+    "name": "java.lang.reflect.Method"
+  },
+  {
     "name": "org.springframework.boot.logging.logback.LogbackLoggingSystem$Factory",
     "allDeclaredConstructors": true
+  },
+  {
+    "name": "org.springframework.data.domain.ExampleMatcher$GenericPropertyMatchers",
+    "allDeclaredConstructors": true,
+    "allDeclaredFields": true
   },
   {
     "name": "org.springframework.boot.autoconfigure.context.ConfigurationPropertiesAutoConfiguration",
@@ -1300,6 +1484,73 @@
     "allDeclaredConstructors": true
   },
   {
+    "name": "com.jump2digital.challenge.v1.documents.Skin",
+    "allDeclaredConstructors": true,
+    "allDeclaredFields": true,
+    "methods": [
+      {
+        "name": "getPrice",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getDescription",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setDescription",
+        "parameterTypes": [
+          "java.lang.String"
+        ]
+      },
+      {
+        "name": "setId",
+        "parameterTypes": [
+          "int"
+        ]
+      },
+      {
+        "name": "setName",
+        "parameterTypes": [
+          "java.lang.String"
+        ]
+      },
+      {
+        "name": "getColor",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getAuthor",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getId",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getName",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setPrice",
+        "parameterTypes": [
+          "int"
+        ]
+      },
+      {
+        "name": "setAuthor",
+        "parameterTypes": [
+          "java.lang.String"
+        ]
+      },
+      {
+        "name": "setColor",
+        "parameterTypes": [
+          "java.lang.String"
+        ]
+      }
+    ]
+  },
+  {
     "name": "org.springframework.boot.autoconfigure.web.servlet.WebMvcProperties$Contentnegotiation",
     "methods": [
       {
@@ -1307,14 +1558,24 @@
         "parameterTypes": [ ]
       },
       {
-        "name": "getMediaTypes",
-        "parameterTypes": [ ]
+        "name": "setFavorParameter",
+        "parameterTypes": [
+          "boolean"
+        ]
       },
       {
         "name": "setParameterName",
         "parameterTypes": [
           "java.lang.String"
         ]
+      },
+      {
+        "name": "getMediaTypes",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "isFavorParameter",
+        "parameterTypes": [ ]
       },
       {
         "name": "getParameterName",
@@ -1325,16 +1586,6 @@
         "parameterTypes": [
           "java.util.Map"
         ]
-      },
-      {
-        "name": "setFavorParameter",
-        "parameterTypes": [
-          "boolean"
-        ]
-      },
-      {
-        "name": "isFavorParameter",
-        "parameterTypes": [ ]
       }
     ]
   },
@@ -1377,10 +1628,11 @@
         "parameterTypes": [ ]
       },
       {
-        "name": "mongoTemplate",
+        "name": "mappingMongoConverter",
         "parameterTypes": [
           "org.springframework.data.mongodb.MongoDatabaseFactory",
-          "org.springframework.data.mongodb.core.convert.MongoConverter"
+          "org.springframework.data.mongodb.core.mapping.MongoMappingContext",
+          "org.springframework.data.mongodb.core.convert.MongoCustomConversions"
         ]
       },
       {
@@ -1393,11 +1645,10 @@
         ]
       },
       {
-        "name": "mappingMongoConverter",
+        "name": "mongoTemplate",
         "parameterTypes": [
           "org.springframework.data.mongodb.MongoDatabaseFactory",
-          "org.springframework.data.mongodb.core.mapping.MongoMappingContext",
-          "org.springframework.data.mongodb.core.convert.MongoCustomConversions"
+          "org.springframework.data.mongodb.core.convert.MongoConverter"
         ]
       }
     ]
@@ -1473,12 +1724,50 @@
     "name": "org.springframework.boot.SpringApplication",
     "methods": [
       {
-        "name": "getResourceLoader",
+        "name": "getSpringBootExceptionHandler",
         "parameterTypes": [ ]
       },
       {
-        "name": "getInitializers",
+        "name": "setApplicationContextFactory",
+        "parameterTypes": [
+          "org.springframework.boot.ApplicationContextFactory"
+        ]
+      },
+      {
+        "name": "getAllSources",
         "parameterTypes": [ ]
+      },
+      {
+        "name": "setAllowCircularReferences",
+        "parameterTypes": [
+          "boolean"
+        ]
+      },
+      {
+        "name": "setAdditionalProfiles",
+        "parameterTypes": [
+          "java.lang.String[]"
+        ]
+      },
+      {
+        "name": "getListeners",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getMainApplicationClass",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setListeners",
+        "parameterTypes": [
+          "java.util.Collection"
+        ]
+      },
+      {
+        "name": "setAddCommandLineProperties",
+        "parameterTypes": [
+          "boolean"
+        ]
       },
       {
         "name": "setEnvironmentPrefix",
@@ -1487,43 +1776,7 @@
         ]
       },
       {
-        "name": "getAllSources",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "setAllowBeanDefinitionOverriding",
-        "parameterTypes": [
-          "boolean"
-        ]
-      },
-      {
-        "name": "setSources",
-        "parameterTypes": [
-          "java.util.Set"
-        ]
-      },
-      {
-        "name": "getApplicationStartup",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "setBanner",
-        "parameterTypes": [
-          "org.springframework.boot.Banner"
-        ]
-      },
-      {
-        "name": "getListeners",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "setAddConversionService",
-        "parameterTypes": [
-          "boolean"
-        ]
-      },
-      {
-        "name": "getWebApplicationType",
+        "name": "getEnvironmentPrefix",
         "parameterTypes": [ ]
       },
       {
@@ -1533,20 +1786,10 @@
         ]
       },
       {
-        "name": "setInitializers",
+        "name": "setDefaultProperties",
         "parameterTypes": [
-          "java.util.Collection"
+          "java.util.Map"
         ]
-      },
-      {
-        "name": "setHeadless",
-        "parameterTypes": [
-          "boolean"
-        ]
-      },
-      {
-        "name": "getSources",
-        "parameterTypes": [ ]
       },
       {
         "name": "setBannerMode",
@@ -1561,24 +1804,20 @@
         ]
       },
       {
-        "name": "setListeners",
+        "name": "setInitializers",
         "parameterTypes": [
           "java.util.Collection"
         ]
       },
       {
-        "name": "getMainApplicationClass",
+        "name": "getInitializers",
         "parameterTypes": [ ]
       },
       {
-        "name": "setMainApplicationClass",
+        "name": "setResourceLoader",
         "parameterTypes": [
-          "java.lang.Class"
+          "org.springframework.core.io.ResourceLoader"
         ]
-      },
-      {
-        "name": "getClassLoader",
-        "parameterTypes": [ ]
       },
       {
         "name": "setEnvironment",
@@ -1587,10 +1826,16 @@
         ]
       },
       {
-        "name": "setAdditionalProfiles",
-        "parameterTypes": [
-          "java.lang.String[]"
-        ]
+        "name": "getAdditionalProfiles",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getApplicationStartup",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getSources",
+        "parameterTypes": [ ]
       },
       {
         "name": "setBeanNameGenerator",
@@ -1599,25 +1844,27 @@
         ]
       },
       {
-        "name": "setWebApplicationType",
+        "name": "setMainApplicationClass",
         "parameterTypes": [
-          "org.springframework.boot.WebApplicationType"
+          "java.lang.Class"
         ]
       },
       {
-        "name": "getSpringBootExceptionHandler",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "setApplicationContextFactory",
+        "name": "setHeadless",
         "parameterTypes": [
-          "org.springframework.boot.ApplicationContextFactory"
+          "boolean"
         ]
       },
       {
-        "name": "setResourceLoader",
+        "name": "setSources",
         "parameterTypes": [
-          "org.springframework.core.io.ResourceLoader"
+          "java.util.Set"
+        ]
+      },
+      {
+        "name": "setAllowBeanDefinitionOverriding",
+        "parameterTypes": [
+          "boolean"
         ]
       },
       {
@@ -1627,25 +1874,9 @@
         ]
       },
       {
-        "name": "setAddCommandLineProperties",
+        "name": "setWebApplicationType",
         "parameterTypes": [
-          "boolean"
-        ]
-      },
-      {
-        "name": "setDefaultProperties",
-        "parameterTypes": [
-          "java.util.Properties"
-        ]
-      },
-      {
-        "name": "getEnvironmentPrefix",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "setAllowCircularReferences",
-        "parameterTypes": [
-          "boolean"
+          "org.springframework.boot.WebApplicationType"
         ]
       },
       {
@@ -1655,7 +1886,27 @@
         ]
       },
       {
-        "name": "getAdditionalProfiles",
+        "name": "setAddConversionService",
+        "parameterTypes": [
+          "boolean"
+        ]
+      },
+      {
+        "name": "setBanner",
+        "parameterTypes": [
+          "org.springframework.boot.Banner"
+        ]
+      },
+      {
+        "name": "getWebApplicationType",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getResourceLoader",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getClassLoader",
         "parameterTypes": [ ]
       }
     ]
@@ -1668,14 +1919,14 @@
         "parameterTypes": [ ]
       },
       {
-        "name": "getTimeout",
-        "parameterTypes": [ ]
-      },
-      {
         "name": "setTimeout",
         "parameterTypes": [
           "java.time.Duration"
         ]
+      },
+      {
+        "name": "getTimeout",
+        "parameterTypes": [ ]
       },
       {
         "name": "getCookie",
@@ -1691,31 +1942,9 @@
         "parameterTypes": [ ]
       },
       {
-        "name": "getMinResponseSize",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "setExcludedUserAgents",
+        "name": "setMimeTypes",
         "parameterTypes": [
           "java.lang.String[]"
-        ]
-      },
-      {
-        "name": "getMimeTypes",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getEnabled",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getExcludedUserAgents",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "setMinResponseSize",
-        "parameterTypes": [
-          "org.springframework.util.unit.DataSize"
         ]
       },
       {
@@ -1725,10 +1954,32 @@
         ]
       },
       {
-        "name": "setMimeTypes",
+        "name": "getEnabled",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getMimeTypes",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setExcludedUserAgents",
         "parameterTypes": [
           "java.lang.String[]"
         ]
+      },
+      {
+        "name": "setMinResponseSize",
+        "parameterTypes": [
+          "org.springframework.util.unit.DataSize"
+        ]
+      },
+      {
+        "name": "getMinResponseSize",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getExcludedUserAgents",
+        "parameterTypes": [ ]
       }
     ]
   },
@@ -1737,8 +1988,30 @@
     "allDeclaredConstructors": true
   },
   {
+    "name": "org.springframework.data.mongodb.core.annotation.Collation",
+    "queryAllPublicMethods": true
+  },
+  {
     "name": "org.springframework.boot.task.TaskSchedulerBuilder",
     "queryAllDeclaredMethods": true
+  },
+  {
+    "name": "org.springframework.data.domain.Sort$Direction",
+    "allDeclaredConstructors": true,
+    "allDeclaredFields": true,
+    "methods": [
+      {
+        "name": "isAscending",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "isDescending",
+        "parameterTypes": [ ]
+      }
+    ]
+  },
+  {
+    "name": "java.lang.Boolean"
   },
   {
     "name": "org.springframework.boot.diagnostics.analyzer.UnboundConfigurationPropertyFailureAnalyzer",
@@ -1808,27 +2081,7 @@
         ]
       },
       {
-        "name": "getFullModeViewNames",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "setChunkedModeViewNames",
-        "parameterTypes": [
-          "java.lang.String[]"
-        ]
-      },
-      {
-        "name": "setMediaTypes",
-        "parameterTypes": [
-          "java.util.List"
-        ]
-      },
-      {
         "name": "getMediaTypes",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getChunkedModeViewNames",
         "parameterTypes": [ ]
       },
       {
@@ -1839,6 +2092,26 @@
         "name": "setMaxChunkSize",
         "parameterTypes": [
           "org.springframework.util.unit.DataSize"
+        ]
+      },
+      {
+        "name": "getFullModeViewNames",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setChunkedModeViewNames",
+        "parameterTypes": [
+          "java.lang.String[]"
+        ]
+      },
+      {
+        "name": "getChunkedModeViewNames",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setMediaTypes",
+        "parameterTypes": [
+          "java.util.List"
         ]
       }
     ]
@@ -1868,16 +2141,6 @@
         "parameterTypes": [ ]
       },
       {
-        "name": "setEnabled",
-        "parameterTypes": [
-          "boolean"
-        ]
-      },
-      {
-        "name": "isEnabled",
-        "parameterTypes": [ ]
-      },
-      {
         "name": "setPaths",
         "parameterTypes": [
           "java.lang.String[]"
@@ -1886,6 +2149,16 @@
       {
         "name": "getPaths",
         "parameterTypes": [ ]
+      },
+      {
+        "name": "isEnabled",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setEnabled",
+        "parameterTypes": [
+          "boolean"
+        ]
       }
     ]
   },
@@ -1915,6 +2188,16 @@
         "parameterTypes": [ ]
       },
       {
+        "name": "getInitParameters",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setClassName",
+        "parameterTypes": [
+          "java.lang.String"
+        ]
+      },
+      {
         "name": "setRegistered",
         "parameterTypes": [
           "boolean"
@@ -1927,17 +2210,7 @@
         ]
       },
       {
-        "name": "setClassName",
-        "parameterTypes": [
-          "java.lang.String"
-        ]
-      },
-      {
         "name": "getClassName",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getInitParameters",
         "parameterTypes": [ ]
       }
     ]
@@ -1945,6 +2218,16 @@
   {
     "name": "org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener",
     "allDeclaredConstructors": true
+  },
+  {
+    "name": "org.springframework.data.repository.config.PropertiesBasedNamedQueriesFactoryBean",
+    "queryAllDeclaredMethods": true,
+    "queriedMethods": [
+      {
+        "name": "<init>",
+        "parameterTypes": [ ]
+      }
+    ]
   },
   {
     "name": "org.springframework.data.util.CustomCollections$VavrCollections",
@@ -1968,14 +2251,14 @@
         "parameterTypes": [ ]
       },
       {
+        "name": "getAwaitTerminationPeriod",
+        "parameterTypes": [ ]
+      },
+      {
         "name": "setAwaitTerminationPeriod",
         "parameterTypes": [
           "java.time.Duration"
         ]
-      },
-      {
-        "name": "getAwaitTerminationPeriod",
-        "parameterTypes": [ ]
       }
     ]
   },
@@ -1990,6 +2273,17 @@
       },
       {
         "name": "jacksonGeoModule",
+        "parameterTypes": [ ]
+      }
+    ]
+  },
+  {
+    "name": "org.springframework.data.domain.ExampleMatcher$PropertySpecifiers",
+    "allDeclaredConstructors": true,
+    "allDeclaredFields": true,
+    "methods": [
+      {
+        "name": "getSpecifiers",
         "parameterTypes": [ ]
       }
     ]
@@ -2133,7 +2427,33 @@
   },
   {
     "name": "org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport",
-    "allPublicMethods": true
+    "allPublicMethods": true,
+    "methods": [
+      {
+        "name": "setQueryLookupStrategyKey",
+        "parameterTypes": [
+          "org.springframework.data.repository.query.QueryLookupStrategy$Key"
+        ]
+      },
+      {
+        "name": "setLazyInit",
+        "parameterTypes": [
+          "boolean"
+        ]
+      },
+      {
+        "name": "setRepositoryFragments",
+        "parameterTypes": [
+          "org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments"
+        ]
+      },
+      {
+        "name": "setNamedQueries",
+        "parameterTypes": [
+          "org.springframework.data.repository.core.NamedQueries"
+        ]
+      }
+    ]
   },
   {
     "name": "org.springframework.aop.framework.autoproxy.InfrastructureAdvisorAutoProxyCreator",
@@ -2154,18 +2474,18 @@
         "parameterTypes": [ ]
       },
       {
-        "name": "isResolveLazily",
+        "name": "getLocation",
         "parameterTypes": [ ]
       },
       {
-        "name": "getFileSizeThreshold",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "setLocation",
+        "name": "setEnabled",
         "parameterTypes": [
-          "java.lang.String"
+          "boolean"
         ]
+      },
+      {
+        "name": "getMaxRequestSize",
+        "parameterTypes": [ ]
       },
       {
         "name": "setMaxFileSize",
@@ -2174,33 +2494,13 @@
         ]
       },
       {
-        "name": "getLocation",
+        "name": "getMaxFileSize",
         "parameterTypes": [ ]
       },
       {
         "name": "setFileSizeThreshold",
         "parameterTypes": [
           "org.springframework.util.unit.DataSize"
-        ]
-      },
-      {
-        "name": "getMaxRequestSize",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getMaxFileSize",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "setMaxRequestSize",
-        "parameterTypes": [
-          "org.springframework.util.unit.DataSize"
-        ]
-      },
-      {
-        "name": "setEnabled",
-        "parameterTypes": [
-          "boolean"
         ]
       },
       {
@@ -2211,6 +2511,26 @@
       },
       {
         "name": "getEnabled",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setLocation",
+        "parameterTypes": [
+          "java.lang.String"
+        ]
+      },
+      {
+        "name": "setMaxRequestSize",
+        "parameterTypes": [
+          "org.springframework.util.unit.DataSize"
+        ]
+      },
+      {
+        "name": "getFileSizeThreshold",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "isResolveLazily",
         "parameterTypes": [ ]
       }
     ]
@@ -2281,48 +2601,10 @@
         "parameterTypes": [ ]
       },
       {
-        "name": "getQualifierDelimiter",
-        "parameterTypes": [ ]
-      },
-      {
         "name": "setDefaultPageSize",
         "parameterTypes": [
           "int"
         ]
-      },
-      {
-        "name": "getPageParameter",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "setPrefix",
-        "parameterTypes": [
-          "java.lang.String"
-        ]
-      },
-      {
-        "name": "setSizeParameter",
-        "parameterTypes": [
-          "java.lang.String"
-        ]
-      },
-      {
-        "name": "getSizeParameter",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "setQualifierDelimiter",
-        "parameterTypes": [
-          "java.lang.String"
-        ]
-      },
-      {
-        "name": "getMaxPageSize",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "isOneIndexedParameters",
-        "parameterTypes": [ ]
       },
       {
         "name": "getPrefix",
@@ -2341,7 +2623,7 @@
         ]
       },
       {
-        "name": "getDefaultPageSize",
+        "name": "getMaxPageSize",
         "parameterTypes": [ ]
       },
       {
@@ -2349,6 +2631,44 @@
         "parameterTypes": [
           "java.lang.String"
         ]
+      },
+      {
+        "name": "isOneIndexedParameters",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setSizeParameter",
+        "parameterTypes": [
+          "java.lang.String"
+        ]
+      },
+      {
+        "name": "getDefaultPageSize",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setQualifierDelimiter",
+        "parameterTypes": [
+          "java.lang.String"
+        ]
+      },
+      {
+        "name": "setPrefix",
+        "parameterTypes": [
+          "java.lang.String"
+        ]
+      },
+      {
+        "name": "getSizeParameter",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getQualifierDelimiter",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getPageParameter",
+        "parameterTypes": [ ]
       }
     ]
   },
@@ -2357,10 +2677,41 @@
     "allDeclaredConstructors": true
   },
   {
+    "name": "org.springframework.data.domain.ScrollPosition",
+    "allDeclaredConstructors": true,
+    "allDeclaredFields": true,
+    "methods": [
+      {
+        "name": "isInitial",
+        "parameterTypes": [ ]
+      }
+    ]
+  },
+  {
+    "name": "org.aopalliance.intercept.Joinpoint",
+    "allDeclaredConstructors": true,
+    "allDeclaredFields": true,
+    "methods": [
+      {
+        "name": "getStaticPart",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getThis",
+        "parameterTypes": [ ]
+      }
+    ]
+  },
+  {
+    "name": "org.aopalliance.intercept.Interceptor",
+    "allDeclaredConstructors": true,
+    "allDeclaredFields": true
+  },
+  {
     "name": "org.springframework.util.MimeType",
     "methods": [
       {
-        "name": "isWildcardType",
+        "name": "isConcrete",
         "parameterTypes": [ ]
       },
       {
@@ -2368,19 +2719,7 @@
         "parameterTypes": [ ]
       },
       {
-        "name": "getParameters",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "isConcrete",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getType",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getCharset",
+        "name": "isWildcardSubtype",
         "parameterTypes": [ ]
       },
       {
@@ -2388,7 +2727,19 @@
         "parameterTypes": [ ]
       },
       {
-        "name": "isWildcardSubtype",
+        "name": "isWildcardType",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getCharset",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getType",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getParameters",
         "parameterTypes": [ ]
       }
     ]
@@ -2406,22 +2757,10 @@
         "parameterTypes": [ ]
       },
       {
-        "name": "isDispatchTraceRequest",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "isDispatchOptionsRequest",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "setDispatchOptionsRequest",
+        "name": "setIgnoreDefaultModelOnRedirect",
         "parameterTypes": [
           "boolean"
         ]
-      },
-      {
-        "name": "isPublishRequestHandledEvents",
-        "parameterTypes": [ ]
       },
       {
         "name": "setLogRequestDetails",
@@ -2430,36 +2769,20 @@
         ]
       },
       {
-        "name": "isLogRequestDetails",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "isLogResolvedException",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getServlet",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getPathmatch",
-        "parameterTypes": [ ]
-      },
-      {
         "name": "getContentnegotiation",
         "parameterTypes": [ ]
       },
       {
-        "name": "setIgnoreDefaultModelOnRedirect",
-        "parameterTypes": [
-          "boolean"
-        ]
+        "name": "isThrowExceptionIfNoHandlerFound",
+        "parameterTypes": [ ]
       },
       {
-        "name": "setPublishRequestHandledEvents",
-        "parameterTypes": [
-          "boolean"
-        ]
+        "name": "getFormat",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "isDispatchOptionsRequest",
+        "parameterTypes": [ ]
       },
       {
         "name": "setThrowExceptionIfNoHandlerFound",
@@ -2468,13 +2791,19 @@
         ]
       },
       {
-        "name": "setDispatchTraceRequest",
-        "parameterTypes": [
-          "boolean"
-        ]
+        "name": "isDispatchTraceRequest",
+        "parameterTypes": [ ]
       },
       {
-        "name": "isThrowExceptionIfNoHandlerFound",
+        "name": "isPublishRequestHandledEvents",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getPathmatch",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "isLogResolvedException",
         "parameterTypes": [ ]
       },
       {
@@ -2484,35 +2813,35 @@
         ]
       },
       {
-        "name": "setStaticPathPattern",
-        "parameterTypes": [
-          "java.lang.String"
-        ]
-      },
-      {
-        "name": "isIgnoreDefaultModelOnRedirect",
+        "name": "getStaticPathPattern",
         "parameterTypes": [ ]
-      },
-      {
-        "name": "getFormat",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getView",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getProblemdetails",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "setMessageCodesResolverFormat",
-        "parameterTypes": [
-          "org.springframework.validation.DefaultMessageCodesResolver$Format"
-        ]
       },
       {
         "name": "getWebjarsPathPattern",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "isLogRequestDetails",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setDispatchOptionsRequest",
+        "parameterTypes": [
+          "boolean"
+        ]
+      },
+      {
+        "name": "getAsync",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setPublishRequestHandledEvents",
+        "parameterTypes": [
+          "boolean"
+        ]
+      },
+      {
+        "name": "getView",
         "parameterTypes": [ ]
       },
       {
@@ -2522,16 +2851,38 @@
         ]
       },
       {
-        "name": "getStaticPathPattern",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getAsync",
-        "parameterTypes": [ ]
+        "name": "setMessageCodesResolverFormat",
+        "parameterTypes": [
+          "org.springframework.validation.DefaultMessageCodesResolver$Format"
+        ]
       },
       {
         "name": "getMessageCodesResolverFormat",
         "parameterTypes": [ ]
+      },
+      {
+        "name": "getServlet",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setDispatchTraceRequest",
+        "parameterTypes": [
+          "boolean"
+        ]
+      },
+      {
+        "name": "getProblemdetails",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "isIgnoreDefaultModelOnRedirect",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setStaticPathPattern",
+        "parameterTypes": [
+          "java.lang.String"
+        ]
       }
     ]
   },
@@ -2595,6 +2946,9 @@
     "allPublicMethods": true
   },
   {
+    "name": "java.util.List"
+  },
+  {
     "name": "org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener",
     "allDeclaredConstructors": true
   },
@@ -2646,6 +3000,14 @@
         "parameterTypes": [ ]
       },
       {
+        "name": "getMax",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getMinSpare",
+        "parameterTypes": [ ]
+      },
+      {
         "name": "setMinSpare",
         "parameterTypes": [
           "int"
@@ -2656,14 +3018,6 @@
         "parameterTypes": [
           "int"
         ]
-      },
-      {
-        "name": "getMinSpare",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getMax",
-        "parameterTypes": [ ]
       }
     ]
   },
@@ -2687,22 +3041,14 @@
         "parameterTypes": [ ]
       },
       {
-        "name": "setPrivateKeyPassword",
-        "parameterTypes": [
-          "java.lang.String"
-        ]
-      },
-      {
-        "name": "setType",
-        "parameterTypes": [
-          "java.lang.String"
-        ]
-      },
-      {
         "name": "setPrivateKey",
         "parameterTypes": [
           "java.lang.String"
         ]
+      },
+      {
+        "name": "getPrivateKeyPassword",
+        "parameterTypes": [ ]
       },
       {
         "name": "setCertificate",
@@ -2715,12 +3061,20 @@
         "parameterTypes": [ ]
       },
       {
-        "name": "getPrivateKeyPassword",
+        "name": "getPrivateKey",
         "parameterTypes": [ ]
       },
       {
-        "name": "getPrivateKey",
-        "parameterTypes": [ ]
+        "name": "setType",
+        "parameterTypes": [
+          "java.lang.String"
+        ]
+      },
+      {
+        "name": "setPrivateKeyPassword",
+        "parameterTypes": [
+          "java.lang.String"
+        ]
       }
     ]
   },
@@ -2761,13 +3115,7 @@
         "parameterTypes": [ ]
       },
       {
-        "name": "setMax",
-        "parameterTypes": [
-          "java.lang.Integer"
-        ]
-      },
-      {
-        "name": "getSelectors",
+        "name": "getAcceptors",
         "parameterTypes": [ ]
       },
       {
@@ -2777,7 +3125,13 @@
         ]
       },
       {
-        "name": "getMax",
+        "name": "setSelectors",
+        "parameterTypes": [
+          "java.lang.Integer"
+        ]
+      },
+      {
+        "name": "getSelectors",
         "parameterTypes": [ ]
       },
       {
@@ -2787,9 +3141,19 @@
         ]
       },
       {
+        "name": "getMax",
+        "parameterTypes": [ ]
+      },
+      {
         "name": "setIdleTimeout",
         "parameterTypes": [
           "java.time.Duration"
+        ]
+      },
+      {
+        "name": "setMax",
+        "parameterTypes": [
+          "java.lang.Integer"
         ]
       },
       {
@@ -2799,25 +3163,15 @@
         ]
       },
       {
+        "name": "getMin",
+        "parameterTypes": [ ]
+      },
+      {
         "name": "getIdleTimeout",
         "parameterTypes": [ ]
       },
       {
         "name": "getMaxQueueCapacity",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getMin",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "setSelectors",
-        "parameterTypes": [
-          "java.lang.Integer"
-        ]
-      },
-      {
-        "name": "getAcceptors",
         "parameterTypes": [ ]
       }
     ]
@@ -2870,14 +3224,14 @@
         "parameterTypes": [ ]
       },
       {
-        "name": "getSortParameter",
-        "parameterTypes": [ ]
-      },
-      {
         "name": "setSortParameter",
         "parameterTypes": [
           "java.lang.String"
         ]
+      },
+      {
+        "name": "getSortParameter",
+        "parameterTypes": [ ]
       }
     ]
   },
@@ -2905,12 +3259,14 @@
         "parameterTypes": [ ]
       },
       {
-        "name": "getCacheTtl",
+        "name": "isAllowCaching",
         "parameterTypes": [ ]
       },
       {
-        "name": "isAllowCaching",
-        "parameterTypes": [ ]
+        "name": "setAllowCaching",
+        "parameterTypes": [
+          "boolean"
+        ]
       },
       {
         "name": "setCacheTtl",
@@ -2919,10 +3275,8 @@
         ]
       },
       {
-        "name": "setAllowCaching",
-        "parameterTypes": [
-          "boolean"
-        ]
+        "name": "getCacheTtl",
+        "parameterTypes": [ ]
       }
     ]
   },
@@ -2939,8 +3293,20 @@
         "parameterTypes": [ ]
       },
       {
-        "name": "getUsername",
+        "name": "setContinueOnError",
+        "parameterTypes": [
+          "boolean"
+        ]
+      },
+      {
+        "name": "isContinueOnError",
         "parameterTypes": [ ]
+      },
+      {
+        "name": "setPassword",
+        "parameterTypes": [
+          "java.lang.String"
+        ]
       },
       {
         "name": "getEncoding",
@@ -2953,11 +3319,31 @@
         ]
       },
       {
-        "name": "getMode",
-        "parameterTypes": [ ]
+        "name": "setMode",
+        "parameterTypes": [
+          "org.springframework.boot.sql.init.DatabaseInitializationMode"
+        ]
       },
       {
         "name": "getSeparator",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setUsername",
+        "parameterTypes": [
+          "java.lang.String"
+        ]
+      },
+      {
+        "name": "getDataLocations",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getSchemaLocations",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getPlatform",
         "parameterTypes": [ ]
       },
       {
@@ -2967,39 +3353,9 @@
         ]
       },
       {
-        "name": "setContinueOnError",
-        "parameterTypes": [
-          "boolean"
-        ]
-      },
-      {
-        "name": "setUsername",
+        "name": "setSeparator",
         "parameterTypes": [
           "java.lang.String"
-        ]
-      },
-      {
-        "name": "getPlatform",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "isContinueOnError",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getSchemaLocations",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "setPassword",
-        "parameterTypes": [
-          "java.lang.String"
-        ]
-      },
-      {
-        "name": "setMode",
-        "parameterTypes": [
-          "org.springframework.boot.sql.init.DatabaseInitializationMode"
         ]
       },
       {
@@ -3009,11 +3365,7 @@
         ]
       },
       {
-        "name": "getPassword",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getDataLocations",
+        "name": "getUsername",
         "parameterTypes": [ ]
       },
       {
@@ -3023,12 +3375,19 @@
         ]
       },
       {
-        "name": "setSeparator",
-        "parameterTypes": [
-          "java.lang.String"
-        ]
+        "name": "getMode",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getPassword",
+        "parameterTypes": [ ]
       }
     ]
+  },
+  {
+    "name": "org.springframework.data.util.MethodInvocationRecorder$DefaultPropertyNameDetectionStrategy",
+    "allDeclaredConstructors": true,
+    "allDeclaredFields": true
   },
   {
     "name": "org.springframework.boot.autoconfigure.web.servlet.WebMvcProperties$Format",
@@ -3038,7 +3397,7 @@
         "parameterTypes": [ ]
       },
       {
-        "name": "setDateTime",
+        "name": "setTime",
         "parameterTypes": [
           "java.lang.String"
         ]
@@ -3048,12 +3407,14 @@
         "parameterTypes": [ ]
       },
       {
-        "name": "getTime",
+        "name": "getDateTime",
         "parameterTypes": [ ]
       },
       {
-        "name": "getDateTime",
-        "parameterTypes": [ ]
+        "name": "setDateTime",
+        "parameterTypes": [
+          "java.lang.String"
+        ]
       },
       {
         "name": "setDate",
@@ -3062,10 +3423,8 @@
         ]
       },
       {
-        "name": "setTime",
-        "parameterTypes": [
-          "java.lang.String"
-        ]
+        "name": "getTime",
+        "parameterTypes": [ ]
       }
     ]
   },
@@ -3080,6 +3439,18 @@
   {
     "name": "org.springframework.boot.context.config.DelegatingApplicationListener",
     "allDeclaredConstructors": true
+  },
+  {
+    "name": "com.jump2digital.challenge.v1.TestMongoConfig$$SpringCGLIB$$0",
+    "allDeclaredMethods": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredFields": true,
+    "queriedMethods": [
+      {
+        "name": "<init>",
+        "parameterTypes": [ ]
+      }
+    ]
   },
   {
     "name": "org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener",
@@ -3101,11 +3472,11 @@
         "parameterTypes": [ ]
       },
       {
-        "name": "getContent",
+        "name": "getFixed",
         "parameterTypes": [ ]
       },
       {
-        "name": "getFixed",
+        "name": "getContent",
         "parameterTypes": [ ]
       }
     ]
@@ -3122,11 +3493,11 @@
         ]
       },
       {
-        "name": "sortResolver",
+        "name": "pageableResolver",
         "parameterTypes": [ ]
       },
       {
-        "name": "pageableResolver",
+        "name": "sortResolver",
         "parameterTypes": [ ]
       }
     ]
@@ -3166,14 +3537,30 @@
   {
     "name": "com.jump2digital.challenge.v1.V1Application",
     "allDeclaredMethods": true,
-    "allPublicMethods": true,
     "queryAllDeclaredMethods": true,
+    "allPublicMethods": true,
     "queriedMethods": [
       {
         "name": "<init>",
         "parameterTypes": [ ]
       }
     ]
+  },
+  {
+    "name": "org.aopalliance.intercept.Invocation",
+    "allDeclaredConstructors": true,
+    "allDeclaredFields": true,
+    "methods": [
+      {
+        "name": "getArguments",
+        "parameterTypes": [ ]
+      }
+    ]
+  },
+  {
+    "name": "org.springframework.data.domain.ExampleMatcher$MatcherConfigurer",
+    "allDeclaredConstructors": true,
+    "allDeclaredFields": true
   },
   {
     "name": "org.springframework.test.context.ApplicationContextFailureProcessor",
@@ -3184,6 +3571,21 @@
     "queryAllDeclaredMethods": true
   },
   {
+    "name": "org.springframework.data.domain.Page",
+    "allDeclaredConstructors": true,
+    "allDeclaredFields": true,
+    "methods": [
+      {
+        "name": "getTotalElements",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getTotalPages",
+        "parameterTypes": [ ]
+      }
+    ]
+  },
+  {
     "name": "org.springframework.boot.autoconfigure.mongo.MongoProperties",
     "queryAllDeclaredMethods": true,
     "methods": [
@@ -3192,8 +3594,10 @@
         "parameterTypes": [ ]
       },
       {
-        "name": "getPassword",
-        "parameterTypes": [ ]
+        "name": "setUsername",
+        "parameterTypes": [
+          "java.lang.String"
+        ]
       },
       {
         "name": "setDatabase",
@@ -3202,7 +3606,13 @@
         ]
       },
       {
-        "name": "getUsername",
+        "name": "setPassword",
+        "parameterTypes": [
+          "char[]"
+        ]
+      },
+      {
+        "name": "isAutoIndexCreation",
         "parameterTypes": [ ]
       },
       {
@@ -3210,24 +3620,10 @@
         "parameterTypes": [ ]
       },
       {
-        "name": "setUri",
+        "name": "setPort",
         "parameterTypes": [
-          "java.lang.String"
+          "java.lang.Integer"
         ]
-      },
-      {
-        "name": "setUuidRepresentation",
-        "parameterTypes": [
-          "org.bson.UuidRepresentation"
-        ]
-      },
-      {
-        "name": "getAdditionalHosts",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getGridfs",
-        "parameterTypes": [ ]
       },
       {
         "name": "getHost",
@@ -3238,27 +3634,35 @@
         "parameterTypes": [ ]
       },
       {
-        "name": "setHost",
+        "name": "getAuthenticationDatabase",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setAdditionalHosts",
+        "parameterTypes": [
+          "java.util.List"
+        ]
+      },
+      {
+        "name": "setUuidRepresentation",
+        "parameterTypes": [
+          "org.bson.UuidRepresentation"
+        ]
+      },
+      {
+        "name": "getReplicaSetName",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setAutoIndexCreation",
+        "parameterTypes": [
+          "java.lang.Boolean"
+        ]
+      },
+      {
+        "name": "setUri",
         "parameterTypes": [
           "java.lang.String"
-        ]
-      },
-      {
-        "name": "setUsername",
-        "parameterTypes": [
-          "java.lang.String"
-        ]
-      },
-      {
-        "name": "setPort",
-        "parameterTypes": [
-          "java.lang.Integer"
-        ]
-      },
-      {
-        "name": "setPassword",
-        "parameterTypes": [
-          "char[]"
         ]
       },
       {
@@ -3272,15 +3676,23 @@
         ]
       },
       {
-        "name": "getAuthenticationDatabase",
+        "name": "setFieldNamingStrategy",
+        "parameterTypes": [
+          "java.lang.Class"
+        ]
+      },
+      {
+        "name": "setHost",
+        "parameterTypes": [
+          "java.lang.String"
+        ]
+      },
+      {
+        "name": "getSsl",
         "parameterTypes": [ ]
       },
       {
-        "name": "getDatabase",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getUuidRepresentation",
+        "name": "getGridfs",
         "parameterTypes": [ ]
       },
       {
@@ -3290,27 +3702,11 @@
         ]
       },
       {
-        "name": "getReplicaSetName",
+        "name": "getPassword",
         "parameterTypes": [ ]
       },
       {
-        "name": "setAdditionalHosts",
-        "parameterTypes": [
-          "java.util.List"
-        ]
-      },
-      {
-        "name": "setAutoIndexCreation",
-        "parameterTypes": [
-          "java.lang.Boolean"
-        ]
-      },
-      {
-        "name": "isAutoIndexCreation",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getSsl",
+        "name": "getAdditionalHosts",
         "parameterTypes": [ ]
       },
       {
@@ -3318,10 +3714,16 @@
         "parameterTypes": [ ]
       },
       {
-        "name": "setFieldNamingStrategy",
-        "parameterTypes": [
-          "java.lang.Class"
-        ]
+        "name": "getUsername",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getDatabase",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getUuidRepresentation",
+        "parameterTypes": [ ]
       }
     ]
   },
@@ -3333,7 +3735,35 @@
         "parameterTypes": [ ]
       },
       {
+        "name": "getIncludeBindingErrors",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getWhitelabel",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setIncludeBindingErrors",
+        "parameterTypes": [
+          "org.springframework.boot.autoconfigure.web.ErrorProperties$IncludeAttribute"
+        ]
+      },
+      {
         "name": "isIncludeException",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getIncludeStacktrace",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setIncludeStacktrace",
+        "parameterTypes": [
+          "org.springframework.boot.autoconfigure.web.ErrorProperties$IncludeAttribute"
+        ]
+      },
+      {
+        "name": "getIncludeMessage",
         "parameterTypes": [ ]
       },
       {
@@ -3347,43 +3777,15 @@
         ]
       },
       {
-        "name": "getIncludeMessage",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getIncludeStacktrace",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "setIncludeBindingErrors",
+        "name": "setIncludeMessage",
         "parameterTypes": [
           "org.springframework.boot.autoconfigure.web.ErrorProperties$IncludeAttribute"
         ]
-      },
-      {
-        "name": "getWhitelabel",
-        "parameterTypes": [ ]
       },
       {
         "name": "setPath",
         "parameterTypes": [
           "java.lang.String"
-        ]
-      },
-      {
-        "name": "getIncludeBindingErrors",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "setIncludeStacktrace",
-        "parameterTypes": [
-          "org.springframework.boot.autoconfigure.web.ErrorProperties$IncludeAttribute"
-        ]
-      },
-      {
-        "name": "setIncludeMessage",
-        "parameterTypes": [
-          "org.springframework.boot.autoconfigure.web.ErrorProperties$IncludeAttribute"
         ]
       }
     ]
@@ -3396,11 +3798,11 @@
         "parameterTypes": [ ]
       },
       {
-        "name": "getTruststore",
+        "name": "getKeystore",
         "parameterTypes": [ ]
       },
       {
-        "name": "getKeystore",
+        "name": "getTruststore",
         "parameterTypes": [ ]
       }
     ]
@@ -3445,6 +3847,10 @@
     "allDeclaredConstructors": true
   },
   {
+    "name": "org.springframework.data.annotation.Id",
+    "queryAllPublicMethods": true
+  },
+  {
     "name": "org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializerDatabaseInitializerDetector",
     "allDeclaredConstructors": true
   },
@@ -3484,6 +3890,21 @@
     "allDeclaredConstructors": true
   },
   {
+    "name": "com.jump2digital.challenge.v1.services.PlayerSkinServiceImp",
+    "queryAllDeclaredMethods": true,
+    "fields": [
+      {
+        "name": "playerskinrepository"
+      }
+    ],
+    "queriedMethods": [
+      {
+        "name": "<init>",
+        "parameterTypes": [ ]
+      }
+    ]
+  },
+  {
     "name": "org.springframework.web.servlet.view.InternalResourceViewResolver",
     "queryAllDeclaredMethods": true
   },
@@ -3515,6 +3936,10 @@
     "allDeclaredConstructors": true
   },
   {
+    "name": "org.springframework.data.mongodb.core.mapping.Document",
+    "queryAllPublicMethods": true
+  },
+  {
     "name": "java.util.Map"
   },
   {
@@ -3522,8 +3947,18 @@
     "allDeclaredConstructors": true
   },
   {
+    "name": "org.aopalliance.aop.Advice",
+    "allDeclaredConstructors": true,
+    "allDeclaredFields": true
+  },
+  {
     "name": "org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory",
     "queryAllDeclaredMethods": true
+  },
+  {
+    "name": "org.springframework.data.util.MethodInvocationRecorder$Recorded$ToMapConverter",
+    "allDeclaredConstructors": true,
+    "allDeclaredFields": true
   },
   {
     "name": "org.springframework.web.filter.RequestContextFilter",
@@ -3559,11 +3994,69 @@
   },
   {
     "name": "org.springframework.data.domain.Example",
-    "allPublicMethods": true
+    "allDeclaredConstructors": true,
+    "allDeclaredFields": true,
+    "allPublicMethods": true,
+    "methods": [
+      {
+        "name": "getMatcher",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getProbe",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getProbeType",
+        "parameterTypes": [ ]
+      }
+    ]
   },
   {
     "name": "org.springframework.web.servlet.function.support.HandlerFunctionAdapter",
     "queryAllDeclaredMethods": true
+  },
+  {
+    "name": "org.springframework.data.domain.Slice",
+    "allDeclaredConstructors": true,
+    "allDeclaredFields": true,
+    "methods": [
+      {
+        "name": "getNumberOfElements",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getNumber",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getPageable",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getSize",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getContent",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getSort",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "isFirst",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "isLast",
+        "parameterTypes": [ ]
+      }
+    ]
+  },
+  {
+    "name": "java.util.stream.Stream"
   },
   {
     "name": "org.springframework.aop.framework.ProxyConfig",
@@ -3584,11 +4077,13 @@
         "parameterTypes": [ ]
       },
       {
-        "name": "getLoadOnStartup",
-        "parameterTypes": [ ]
+        "name": "setPath",
+        "parameterTypes": [
+          "java.lang.String"
+        ]
       },
       {
-        "name": "getServletMapping",
+        "name": "getServletPrefix",
         "parameterTypes": [ ]
       },
       {
@@ -3598,17 +4093,15 @@
         ]
       },
       {
-        "name": "setPath",
-        "parameterTypes": [
-          "java.lang.String"
-        ]
-      },
-      {
         "name": "getPath",
         "parameterTypes": [ ]
       },
       {
-        "name": "getServletPrefix",
+        "name": "getServletMapping",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getLoadOnStartup",
         "parameterTypes": [ ]
       }
     ]
@@ -3642,16 +4135,16 @@
     "queryAllDeclaredMethods": true,
     "methods": [
       {
+        "name": "error",
+        "parameterTypes": [
+          "jakarta.servlet.http.HttpServletRequest"
+        ]
+      },
+      {
         "name": "errorHtml",
         "parameterTypes": [
           "jakarta.servlet.http.HttpServletRequest",
           "jakarta.servlet.http.HttpServletResponse"
-        ]
-      },
-      {
-        "name": "error",
-        "parameterTypes": [
-          "jakarta.servlet.http.HttpServletRequest"
         ]
       },
       {
@@ -3670,28 +4163,22 @@
         "parameterTypes": [ ]
       },
       {
+        "name": "getMaxHttpFormPostSize",
+        "parameterTypes": [ ]
+      },
+      {
         "name": "setConnectionIdleTimeout",
         "parameterTypes": [
           "java.time.Duration"
         ]
       },
       {
-        "name": "getThreads",
-        "parameterTypes": [ ]
-      },
-      {
         "name": "getMaxHttpResponseHeaderSize",
         "parameterTypes": [ ]
       },
       {
-        "name": "getMaxHttpFormPostSize",
+        "name": "getAccesslog",
         "parameterTypes": [ ]
-      },
-      {
-        "name": "setMaxHttpFormPostSize",
-        "parameterTypes": [
-          "org.springframework.util.unit.DataSize"
-        ]
       },
       {
         "name": "setMaxHttpResponseHeaderSize",
@@ -3700,11 +4187,48 @@
         ]
       },
       {
-        "name": "getAccesslog",
+        "name": "getConnectionIdleTimeout",
         "parameterTypes": [ ]
       },
       {
-        "name": "getConnectionIdleTimeout",
+        "name": "getThreads",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setMaxHttpFormPostSize",
+        "parameterTypes": [
+          "org.springframework.util.unit.DataSize"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "org.springframework.data.domain.Sort$Order",
+    "allDeclaredConstructors": true,
+    "allDeclaredFields": true,
+    "methods": [
+      {
+        "name": "isIgnoreCase",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getDirection",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "isDescending",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getNullHandling",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "isAscending",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getProperty",
         "parameterTypes": [ ]
       }
     ]
@@ -3712,6 +4236,11 @@
   {
     "name": "org.springframework.boot.autoconfigure.data.redis.RedisUrlSyntaxFailureAnalyzer",
     "allDeclaredConstructors": true
+  },
+  {
+    "name": "org.springframework.data.domain.Sort$NullHandling",
+    "allDeclaredConstructors": true,
+    "allDeclaredFields": true
   },
   {
     "name": "org.springframework.boot.autoconfigure.task.TaskSchedulingProperties$Pool",
@@ -3733,62 +4262,14 @@
     ]
   },
   {
+    "name": "org.springframework.data.repository.NoRepositoryBean",
+    "queryAllPublicMethods": true
+  },
+  {
     "name": "org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport",
     "queriedMethods": [
       {
-        "name": "mvcUriComponentsContributor",
-        "parameterTypes": [
-          "org.springframework.format.support.FormattingConversionService",
-          "org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter"
-        ]
-      },
-      {
-        "name": "requestMappingHandlerMapping",
-        "parameterTypes": [
-          "org.springframework.web.accept.ContentNegotiationManager",
-          "org.springframework.format.support.FormattingConversionService",
-          "org.springframework.web.servlet.resource.ResourceUrlProvider"
-        ]
-      },
-      {
-        "name": "mvcResourceUrlProvider",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "handlerFunctionAdapter",
-        "parameterTypes": [ ]
-      },
-      {
         "name": "simpleControllerHandlerAdapter",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "mvcViewResolver",
-        "parameterTypes": [
-          "org.springframework.web.accept.ContentNegotiationManager"
-        ]
-      },
-      {
-        "name": "mvcPathMatcher",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "beanNameHandlerMapping",
-        "parameterTypes": [
-          "org.springframework.format.support.FormattingConversionService",
-          "org.springframework.web.servlet.resource.ResourceUrlProvider"
-        ]
-      },
-      {
-        "name": "defaultServletHandlerMapping",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "viewNameTranslator",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "httpRequestHandlerAdapter",
         "parameterTypes": [ ]
       },
       {
@@ -3799,15 +4280,25 @@
         ]
       },
       {
-        "name": "mvcHandlerMappingIntrospector",
+        "name": "mvcUrlPathHelper",
         "parameterTypes": [ ]
       },
       {
-        "name": "mvcPatternParser",
+        "name": "viewNameTranslator",
         "parameterTypes": [ ]
       },
       {
-        "name": "resourceHandlerMapping",
+        "name": "handlerExceptionResolver",
+        "parameterTypes": [
+          "org.springframework.web.accept.ContentNegotiationManager"
+        ]
+      },
+      {
+        "name": "defaultServletHandlerMapping",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "requestMappingHandlerMapping",
         "parameterTypes": [
           "org.springframework.web.accept.ContentNegotiationManager",
           "org.springframework.format.support.FormattingConversionService",
@@ -3822,14 +4313,56 @@
         ]
       },
       {
-        "name": "handlerExceptionResolver",
+        "name": "mvcPathMatcher",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "mvcResourceUrlProvider",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "mvcUriComponentsContributor",
+        "parameterTypes": [
+          "org.springframework.format.support.FormattingConversionService",
+          "org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter"
+        ]
+      },
+      {
+        "name": "handlerFunctionAdapter",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "mvcPatternParser",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "mvcViewResolver",
         "parameterTypes": [
           "org.springframework.web.accept.ContentNegotiationManager"
         ]
       },
       {
-        "name": "mvcUrlPathHelper",
+        "name": "httpRequestHandlerAdapter",
         "parameterTypes": [ ]
+      },
+      {
+        "name": "resourceHandlerMapping",
+        "parameterTypes": [
+          "org.springframework.web.accept.ContentNegotiationManager",
+          "org.springframework.format.support.FormattingConversionService",
+          "org.springframework.web.servlet.resource.ResourceUrlProvider"
+        ]
+      },
+      {
+        "name": "mvcHandlerMappingIntrospector",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "beanNameHandlerMapping",
+        "parameterTypes": [
+          "org.springframework.format.support.FormattingConversionService",
+          "org.springframework.web.servlet.resource.ResourceUrlProvider"
+        ]
       }
     ]
   },
@@ -3881,11 +4414,89 @@
         "parameterTypes": [ ]
       },
       {
-        "name": "getReactive",
+        "name": "getPort",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getTomcat",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getServlet",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setServerHeader",
+        "parameterTypes": [
+          "java.lang.String"
+        ]
+      },
+      {
+        "name": "getCompression",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getSsl",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setMaxHttpHeaderSize",
+        "parameterTypes": [
+          "org.springframework.util.unit.DataSize"
+        ]
+      },
+      {
+        "name": "setSsl",
+        "parameterTypes": [
+          "org.springframework.boot.web.server.Ssl"
+        ]
+      },
+      {
+        "name": "getMaxHttpRequestHeaderSize",
         "parameterTypes": [ ]
       },
       {
         "name": "getMaxHttpHeaderSize",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getReactive",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getServerHeader",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getForwardHeadersStrategy",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setPort",
+        "parameterTypes": [
+          "java.lang.Integer"
+        ]
+      },
+      {
+        "name": "setShutdown",
+        "parameterTypes": [
+          "org.springframework.boot.web.server.Shutdown"
+        ]
+      },
+      {
+        "name": "getHttp2",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getJetty",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getError",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getAddress",
         "parameterTypes": [ ]
       },
       {
@@ -3901,82 +4512,12 @@
         ]
       },
       {
-        "name": "getSsl",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getShutdown",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getTomcat",
+        "name": "getNetty",
         "parameterTypes": [ ]
       },
       {
         "name": "getUndertow",
         "parameterTypes": [ ]
-      },
-      {
-        "name": "setSsl",
-        "parameterTypes": [
-          "org.springframework.boot.web.server.Ssl"
-        ]
-      },
-      {
-        "name": "getHttp2",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getError",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getForwardHeadersStrategy",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "setServerHeader",
-        "parameterTypes": [
-          "java.lang.String"
-        ]
-      },
-      {
-        "name": "setPort",
-        "parameterTypes": [
-          "java.lang.Integer"
-        ]
-      },
-      {
-        "name": "getCompression",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "setShutdown",
-        "parameterTypes": [
-          "org.springframework.boot.web.server.Shutdown"
-        ]
-      },
-      {
-        "name": "getAddress",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getPort",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getServerHeader",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getServlet",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "setMaxHttpHeaderSize",
-        "parameterTypes": [
-          "org.springframework.util.unit.DataSize"
-        ]
       },
       {
         "name": "setMaxHttpRequestHeaderSize",
@@ -3985,15 +4526,7 @@
         ]
       },
       {
-        "name": "getMaxHttpRequestHeaderSize",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getNetty",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getJetty",
+        "name": "getShutdown",
         "parameterTypes": [ ]
       }
     ]
@@ -4006,25 +4539,13 @@
         "parameterTypes": [ ]
       },
       {
-        "name": "getPath",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getDomain",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getName",
-        "parameterTypes": [ ]
-      },
-      {
         "name": "setMaxAge",
         "parameterTypes": [
           "java.time.Duration"
         ]
       },
       {
-        "name": "setName",
+        "name": "setPath",
         "parameterTypes": [
           "java.lang.String"
         ]
@@ -4036,8 +4557,42 @@
         ]
       },
       {
+        "name": "getPath",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getName",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setSecure",
+        "parameterTypes": [
+          "java.lang.Boolean"
+        ]
+      },
+      {
+        "name": "getSameSite",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getMaxAge",
+        "parameterTypes": [ ]
+      },
+      {
         "name": "getSecure",
         "parameterTypes": [ ]
+      },
+      {
+        "name": "setName",
+        "parameterTypes": [
+          "java.lang.String"
+        ]
+      },
+      {
+        "name": "setHttpOnly",
+        "parameterTypes": [
+          "java.lang.Boolean"
+        ]
       },
       {
         "name": "getHttpOnly",
@@ -4050,30 +4605,8 @@
         ]
       },
       {
-        "name": "getSameSite",
+        "name": "getDomain",
         "parameterTypes": [ ]
-      },
-      {
-        "name": "setHttpOnly",
-        "parameterTypes": [
-          "java.lang.Boolean"
-        ]
-      },
-      {
-        "name": "setSecure",
-        "parameterTypes": [
-          "java.lang.Boolean"
-        ]
-      },
-      {
-        "name": "getMaxAge",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "setPath",
-        "parameterTypes": [
-          "java.lang.String"
-        ]
       }
     ]
   },
@@ -4090,8 +4623,17 @@
     "allDeclaredConstructors": true
   },
   {
+    "name": "org.springframework.aot.hint.annotation.Reflective",
+    "allDeclaredConstructors": true,
+    "allDeclaredFields": true,
+    "queryAllPublicMethods": true
+  },
+  {
     "name": "org.springframework.boot.orm.jpa.JpaDependsOnDatabaseInitializationDetector",
     "allDeclaredConstructors": true
+  },
+  {
+    "name": "java.util.Collection"
   },
   {
     "name": "org.springframework.http.HttpMethod",
@@ -4109,22 +4651,66 @@
     "allPublicConstructors": true
   },
   {
+    "name": "org.springframework.data.domain.ExampleMatcher",
+    "allDeclaredConstructors": true,
+    "allDeclaredFields": true,
+    "methods": [
+      {
+        "name": "getIgnoredPaths",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "isAllMatching",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getPropertySpecifiers",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getNullHandler",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "isIgnoreCaseEnabled",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "isAnyMatching",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getMatchMode",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getDefaultStringMatcher",
+        "parameterTypes": [ ]
+      }
+    ]
+  },
+  {
     "name": "java.sql.Date",
     "condition": {
       "typeReachable": "java.sql.Date"
     },
     "methods": [
       {
-        "name": "toLocalDate",
-        "parameterTypes": [ ]
-      },
-      {
         "name": "valueOf",
         "parameterTypes": [
           "java.time.LocalDate"
         ]
+      },
+      {
+        "name": "toLocalDate",
+        "parameterTypes": [ ]
       }
     ]
+  },
+  {
+    "name": "org.springframework.data.util.MethodInvocationRecorder$RecordingMethodInterceptor",
+    "allDeclaredConstructors": true,
+    "allDeclaredFields": true
   },
   {
     "name": "org.springframework.boot.env.PropertySourceLoader",
@@ -4152,11 +4738,11 @@
     "allDeclaredFields": true,
     "methods": [
       {
-        "name": "is4xxClientError",
+        "name": "is3xxRedirection",
         "parameterTypes": [ ]
       },
       {
-        "name": "isError",
+        "name": "getReasonPhrase",
         "parameterTypes": [ ]
       },
       {
@@ -4168,15 +4754,15 @@
         "parameterTypes": [ ]
       },
       {
-        "name": "is3xxRedirection",
-        "parameterTypes": [ ]
-      },
-      {
         "name": "is5xxServerError",
         "parameterTypes": [ ]
       },
       {
-        "name": "getReasonPhrase",
+        "name": "is4xxClientError",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "isError",
         "parameterTypes": [ ]
       }
     ]
@@ -4212,6 +4798,11 @@
     "allPublicMethods": true
   },
   {
+    "name": "org.springframework.data.util.MethodInvocationRecorder",
+    "allDeclaredConstructors": true,
+    "allDeclaredFields": true
+  },
+  {
     "name": "org.springframework.boot.autoconfigure.condition.OnBeanCondition",
     "allDeclaredConstructors": true
   },
@@ -4228,17 +4819,17 @@
         "parameterTypes": [ ]
       },
       {
+        "name": "applicationTaskExecutor",
+        "parameterTypes": [
+          "org.springframework.boot.task.TaskExecutorBuilder"
+        ]
+      },
+      {
         "name": "taskExecutorBuilder",
         "parameterTypes": [
           "org.springframework.boot.autoconfigure.task.TaskExecutionProperties",
           "org.springframework.beans.factory.ObjectProvider",
           "org.springframework.beans.factory.ObjectProvider"
-        ]
-      },
-      {
-        "name": "applicationTaskExecutor",
-        "parameterTypes": [
-          "org.springframework.boot.task.TaskExecutorBuilder"
         ]
       }
     ]
@@ -4246,6 +4837,9 @@
   {
     "name": "org.springframework.boot.task.TaskExecutorBuilder",
     "queryAllDeclaredMethods": true
+  },
+  {
+    "name": "java.lang.Object[]"
   },
   {
     "name": "jakarta.servlet.Servlet"
@@ -4295,14 +4889,14 @@
         "parameterTypes": [ ]
       },
       {
-        "name": "getAwaitTerminationPeriod",
-        "parameterTypes": [ ]
-      },
-      {
         "name": "setAwaitTerminationPeriod",
         "parameterTypes": [
           "java.time.Duration"
         ]
+      },
+      {
+        "name": "getAwaitTerminationPeriod",
+        "parameterTypes": [ ]
       },
       {
         "name": "isAwaitTermination",
@@ -4313,6 +4907,17 @@
         "parameterTypes": [
           "boolean"
         ]
+      }
+    ]
+  },
+  {
+    "name": "org.springframework.data.domain.OffsetScrollPosition$OffsetPositionFunction",
+    "allDeclaredConstructors": true,
+    "allDeclaredFields": true,
+    "methods": [
+      {
+        "name": "startOffset",
+        "parameterTypes": [ ]
       }
     ]
   },
@@ -4359,15 +4964,15 @@
         ]
       },
       {
-        "name": "getResources",
-        "parameterTypes": [ ]
-      },
-      {
         "name": "getLocaleResolver",
         "parameterTypes": [ ]
       },
       {
         "name": "getLocale",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getResources",
         "parameterTypes": [ ]
       },
       {
@@ -4401,8 +5006,12 @@
         ]
       },
       {
-        "name": "mvcConversionService",
-        "parameterTypes": [ ]
+        "name": "welcomePageNotAcceptableHandlerMapping",
+        "parameterTypes": [
+          "org.springframework.context.ApplicationContext",
+          "org.springframework.format.support.FormattingConversionService",
+          "org.springframework.web.servlet.resource.ResourceUrlProvider"
+        ]
       },
       {
         "name": "requestMappingHandlerAdapter",
@@ -4411,6 +5020,14 @@
           "org.springframework.format.support.FormattingConversionService",
           "org.springframework.validation.Validator"
         ]
+      },
+      {
+        "name": "themeResolver",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "mvcConversionService",
+        "parameterTypes": [ ]
       },
       {
         "name": "localeResolver",
@@ -4425,10 +5042,6 @@
         "parameterTypes": [ ]
       },
       {
-        "name": "mvcValidator",
-        "parameterTypes": [ ]
-      },
-      {
         "name": "welcomePageHandlerMapping",
         "parameterTypes": [
           "org.springframework.context.ApplicationContext",
@@ -4437,16 +5050,8 @@
         ]
       },
       {
-        "name": "themeResolver",
+        "name": "mvcValidator",
         "parameterTypes": [ ]
-      },
-      {
-        "name": "welcomePageNotAcceptableHandlerMapping",
-        "parameterTypes": [
-          "org.springframework.context.ApplicationContext",
-          "org.springframework.format.support.FormattingConversionService",
-          "org.springframework.web.servlet.resource.ResourceUrlProvider"
-        ]
       }
     ]
   },
@@ -4465,6 +5070,46 @@
     "queryAllDeclaredMethods": true
   },
   {
+    "name": "org.springframework.data.domain.ExampleMatcher$PropertySpecifier",
+    "allDeclaredConstructors": true,
+    "allDeclaredFields": true,
+    "methods": [
+      {
+        "name": "getPropertyValueTransformer",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getPath",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getStringMatcher",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getIgnoreCase",
+        "parameterTypes": [ ]
+      }
+    ]
+  },
+  {
+    "name": "org.springframework.core.io.support.PropertiesLoaderSupport",
+    "methods": [
+      {
+        "name": "setLocations",
+        "parameterTypes": [
+          "org.springframework.core.io.Resource[]"
+        ]
+      },
+      {
+        "name": "setIgnoreResourceNotFound",
+        "parameterTypes": [
+          "boolean"
+        ]
+      }
+    ]
+  },
+  {
     "name": "org.springframework.boot.autoconfigure.web.ServerProperties$Undertow$Options",
     "methods": [
       {
@@ -4472,11 +5117,11 @@
         "parameterTypes": [ ]
       },
       {
-        "name": "getServer",
+        "name": "getSocket",
         "parameterTypes": [ ]
       },
       {
-        "name": "getSocket",
+        "name": "getServer",
         "parameterTypes": [ ]
       }
     ]
@@ -4484,6 +5129,25 @@
   {
     "name": "org.springframework.boot.autoconfigure.integration.IntegrationPropertiesEnvironmentPostProcessor",
     "allDeclaredConstructors": true
+  },
+  {
+    "name": "org.springframework.data.domain.OffsetScrollPosition",
+    "allDeclaredConstructors": true,
+    "allDeclaredFields": true,
+    "methods": [
+      {
+        "name": "getOffset",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "isInitial",
+        "parameterTypes": [ ]
+      }
+    ]
+  },
+  {
+    "name": "org.springframework.data.annotation.Persistent",
+    "queryAllPublicMethods": true
   },
   {
     "name": "org.springframework.boot.autoconfigure.web.servlet.ServletWebServerFactoryCustomizer",
@@ -4558,77 +5222,11 @@
         "parameterTypes": [ ]
       },
       {
-        "name": "setNoTransform",
-        "parameterTypes": [
-          "java.lang.Boolean"
-        ]
-      },
-      {
-        "name": "getSMaxAge",
+        "name": "getStaleIfError",
         "parameterTypes": [ ]
       },
       {
-        "name": "getStaleWhileRevalidate",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "setStaleWhileRevalidate",
-        "parameterTypes": [
-          "java.time.Duration"
-        ]
-      },
-      {
-        "name": "getMaxAge",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getNoCache",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "setStaleIfError",
-        "parameterTypes": [
-          "java.time.Duration"
-        ]
-      },
-      {
-        "name": "getNoStore",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "setCachePublic",
-        "parameterTypes": [
-          "java.lang.Boolean"
-        ]
-      },
-      {
-        "name": "setProxyRevalidate",
-        "parameterTypes": [
-          "java.lang.Boolean"
-        ]
-      },
-      {
-        "name": "setMaxAge",
-        "parameterTypes": [
-          "java.time.Duration"
-        ]
-      },
-      {
-        "name": "getCachePrivate",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "setSMaxAge",
-        "parameterTypes": [
-          "java.time.Duration"
-        ]
-      },
-      {
-        "name": "getCachePublic",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "setCachePrivate",
+        "name": "setNoStore",
         "parameterTypes": [
           "java.lang.Boolean"
         ]
@@ -4640,7 +5238,17 @@
         ]
       },
       {
-        "name": "getStaleIfError",
+        "name": "getCachePublic",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setCachePublic",
+        "parameterTypes": [
+          "java.lang.Boolean"
+        ]
+      },
+      {
+        "name": "getMustRevalidate",
         "parameterTypes": [ ]
       },
       {
@@ -4648,11 +5256,27 @@
         "parameterTypes": [ ]
       },
       {
-        "name": "getMustRevalidate",
+        "name": "getNoCache",
         "parameterTypes": [ ]
       },
       {
-        "name": "getNoTransform",
+        "name": "getCachePrivate",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setProxyRevalidate",
+        "parameterTypes": [
+          "java.lang.Boolean"
+        ]
+      },
+      {
+        "name": "setNoTransform",
+        "parameterTypes": [
+          "java.lang.Boolean"
+        ]
+      },
+      {
+        "name": "getSMaxAge",
         "parameterTypes": [ ]
       },
       {
@@ -4662,9 +5286,49 @@
         ]
       },
       {
-        "name": "setNoStore",
+        "name": "getNoStore",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setStaleIfError",
+        "parameterTypes": [
+          "java.time.Duration"
+        ]
+      },
+      {
+        "name": "setCachePrivate",
         "parameterTypes": [
           "java.lang.Boolean"
+        ]
+      },
+      {
+        "name": "getMaxAge",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getStaleWhileRevalidate",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getNoTransform",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setMaxAge",
+        "parameterTypes": [
+          "java.time.Duration"
+        ]
+      },
+      {
+        "name": "setStaleWhileRevalidate",
+        "parameterTypes": [
+          "java.time.Duration"
+        ]
+      },
+      {
+        "name": "setSMaxAge",
+        "parameterTypes": [
+          "java.time.Duration"
         ]
       }
     ]
@@ -4681,11 +5345,17 @@
         "parameterTypes": [ ]
       },
       {
+        "name": "setStaticLocations",
+        "parameterTypes": [
+          "java.lang.String[]"
+        ]
+      },
+      {
         "name": "getStaticLocations",
         "parameterTypes": [ ]
       },
       {
-        "name": "getCache",
+        "name": "getChain",
         "parameterTypes": [ ]
       },
       {
@@ -4699,16 +5369,15 @@
         "parameterTypes": [ ]
       },
       {
-        "name": "setStaticLocations",
-        "parameterTypes": [
-          "java.lang.String[]"
-        ]
-      },
-      {
-        "name": "getChain",
+        "name": "getCache",
         "parameterTypes": [ ]
       }
     ]
+  },
+  {
+    "name": "java.lang.Object",
+    "allDeclaredConstructors": true,
+    "allPublicMethods": true
   },
   {
     "name": "org.springframework.boot.jooq.JooqDependsOnDatabaseInitializationDetector",
@@ -4723,6 +5392,10 @@
         "parameterTypes": [ ]
       },
       {
+        "name": "getThreadNamePrefix",
+        "parameterTypes": [ ]
+      },
+      {
         "name": "getShutdown",
         "parameterTypes": [ ]
       },
@@ -4731,10 +5404,6 @@
         "parameterTypes": [
           "java.lang.String"
         ]
-      },
-      {
-        "name": "getThreadNamePrefix",
-        "parameterTypes": [ ]
       },
       {
         "name": "getPool",
@@ -4791,6 +5460,15 @@
     "allPublicMethods": true
   },
   {
+    "name": "org.springframework.data.domain.ExampleMatcher$NoOpPropertyValueTransformer",
+    "allDeclaredConstructors": true,
+    "allDeclaredFields": true
+  },
+  {
+    "name": "com.jump2digital.challenge.v1.TestMongoConfig$$SpringCGLIB$$FastClass$$0",
+    "allDeclaredConstructors": true
+  },
+  {
     "name": "org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonMixinConfiguration",
     "queryAllDeclaredMethods": true,
     "queriedMethods": [
@@ -4808,6 +5486,10 @@
     ]
   },
   {
+    "name": "com.jump2digital.challenge.v1.TestMongoConfig$$SpringCGLIB$$FastClass$$1",
+    "allDeclaredConstructors": true
+  },
+  {
     "name": "org.springframework.boot.autoconfigure.web.ServerProperties$Undertow",
     "methods": [
       {
@@ -4815,44 +5497,16 @@
         "parameterTypes": [ ]
       },
       {
-        "name": "getBufferSize",
+        "name": "isPreservePathOnForward",
         "parameterTypes": [ ]
       },
       {
-        "name": "getThreads",
+        "name": "isAlwaysSetKeepAlive",
         "parameterTypes": [ ]
       },
       {
-        "name": "getMaxParameters",
+        "name": "isEagerFilterInit",
         "parameterTypes": [ ]
-      },
-      {
-        "name": "getNoRequestTimeout",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getAccesslog",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getMaxHttpPostSize",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getUrlCharset",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "setNoRequestTimeout",
-        "parameterTypes": [
-          "java.time.Duration"
-        ]
-      },
-      {
-        "name": "setPreservePathOnForward",
-        "parameterTypes": [
-          "boolean"
-        ]
       },
       {
         "name": "setMaxHttpPostSize",
@@ -4861,13 +5515,51 @@
         ]
       },
       {
+        "name": "isAllowEncodedSlash",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getMaxHeaders",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getMaxCookies",
+        "parameterTypes": [ ]
+      },
+      {
         "name": "setDecodeUrl",
         "parameterTypes": [
           "java.lang.Boolean"
         ]
       },
       {
-        "name": "isPreservePathOnForward",
+        "name": "getOptions",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "isDecodeUrl",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getDirectBuffers",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getMaxHttpPostSize",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setPreservePathOnForward",
+        "parameterTypes": [
+          "boolean"
+        ]
+      },
+      {
+        "name": "getUrlCharset",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getNoRequestTimeout",
         "parameterTypes": [ ]
       },
       {
@@ -4877,18 +5569,16 @@
         ]
       },
       {
-        "name": "getDecodeSlash",
-        "parameterTypes": [ ]
+        "name": "setMaxParameters",
+        "parameterTypes": [
+          "java.lang.Integer"
+        ]
       },
       {
         "name": "setAllowEncodedSlash",
         "parameterTypes": [
           "boolean"
         ]
-      },
-      {
-        "name": "getOptions",
-        "parameterTypes": [ ]
       },
       {
         "name": "setBufferSize",
@@ -4903,9 +5593,9 @@
         ]
       },
       {
-        "name": "setMaxParameters",
+        "name": "setNoRequestTimeout",
         "parameterTypes": [
-          "java.lang.Integer"
+          "java.time.Duration"
         ]
       },
       {
@@ -4915,30 +5605,30 @@
         ]
       },
       {
-        "name": "isAlwaysSetKeepAlive",
+        "name": "getBufferSize",
         "parameterTypes": [ ]
       },
       {
-        "name": "isDecodeUrl",
+        "name": "getAccesslog",
         "parameterTypes": [ ]
       },
       {
-        "name": "isAllowEncodedSlash",
+        "name": "getMaxParameters",
         "parameterTypes": [ ]
       },
       {
-        "name": "setEagerFilterInit",
+        "name": "getDecodeSlash",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getThreads",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setAlwaysSetKeepAlive",
         "parameterTypes": [
           "boolean"
         ]
-      },
-      {
-        "name": "getMaxHeaders",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "isEagerFilterInit",
-        "parameterTypes": [ ]
       },
       {
         "name": "setDirectBuffers",
@@ -4947,23 +5637,15 @@
         ]
       },
       {
-        "name": "getDirectBuffers",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getMaxCookies",
-        "parameterTypes": [ ]
+        "name": "setEagerFilterInit",
+        "parameterTypes": [
+          "boolean"
+        ]
       },
       {
         "name": "setDecodeSlash",
         "parameterTypes": [
           "java.lang.Boolean"
-        ]
-      },
-      {
-        "name": "setAlwaysSetKeepAlive",
-        "parameterTypes": [
-          "boolean"
         ]
       }
     ]
@@ -4978,13 +5660,13 @@
     "allDeclaredFields": true,
     "methods": [
       {
-        "name": "getTitle",
+        "name": "getInstance",
         "parameterTypes": [ ]
       },
       {
-        "name": "setInstance",
+        "name": "setStatus",
         "parameterTypes": [
-          "java.net.URI"
+          "org.springframework.http.HttpStatus"
         ]
       },
       {
@@ -4994,13 +5676,7 @@
         ]
       },
       {
-        "name": "setStatus",
-        "parameterTypes": [
-          "int"
-        ]
-      },
-      {
-        "name": "getDetail",
+        "name": "getProperties",
         "parameterTypes": [ ]
       },
       {
@@ -5014,28 +5690,34 @@
         ]
       },
       {
-        "name": "setType",
+        "name": "setStatus",
+        "parameterTypes": [
+          "int"
+        ]
+      },
+      {
+        "name": "setInstance",
         "parameterTypes": [
           "java.net.URI"
         ]
       },
       {
-        "name": "getInstance",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getProperties",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "setStatus",
-        "parameterTypes": [
-          "org.springframework.http.HttpStatus"
-        ]
-      },
-      {
         "name": "getType",
         "parameterTypes": [ ]
+      },
+      {
+        "name": "getDetail",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getTitle",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setType",
+        "parameterTypes": [
+          "java.net.URI"
+        ]
       }
     ]
   },
@@ -5048,16 +5730,16 @@
         "parameterTypes": [ ]
       },
       {
-        "name": "mongoCustomConversions",
-        "parameterTypes": [ ]
-      },
-      {
         "name": "mongoMappingContext",
         "parameterTypes": [
           "org.springframework.boot.autoconfigure.mongo.MongoProperties",
           "org.springframework.data.mongodb.core.convert.MongoCustomConversions",
           "org.springframework.data.mongodb.MongoManagedTypes"
         ]
+      },
+      {
+        "name": "mongoCustomConversions",
+        "parameterTypes": [ ]
       }
     ]
   },
@@ -5088,7 +5770,7 @@
         "parameterTypes": [ ]
       },
       {
-        "name": "getEncoding",
+        "name": "isRenameOnRotate",
         "parameterTypes": [ ]
       },
       {
@@ -5098,61 +5780,9 @@
         ]
       },
       {
-        "name": "setConditionUnless",
+        "name": "setPrefix",
         "parameterTypes": [
           "java.lang.String"
-        ]
-      },
-      {
-        "name": "isRenameOnRotate",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "setEncoding",
-        "parameterTypes": [
-          "java.lang.String"
-        ]
-      },
-      {
-        "name": "setEnabled",
-        "parameterTypes": [
-          "boolean"
-        ]
-      },
-      {
-        "name": "setSuffix",
-        "parameterTypes": [
-          "java.lang.String"
-        ]
-      },
-      {
-        "name": "isBuffered",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getPrefix",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "isIpv6Canonical",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "isRotate",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getFileDateFormat",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getPattern",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "setMaxDays",
-        "parameterTypes": [
-          "int"
         ]
       },
       {
@@ -5160,31 +5790,15 @@
         "parameterTypes": [ ]
       },
       {
-        "name": "isCheckExists",
+        "name": "getDirectory",
         "parameterTypes": [ ]
       },
       {
-        "name": "getConditionIf",
+        "name": "isEnabled",
         "parameterTypes": [ ]
-      },
-      {
-        "name": "getLocale",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "setRotate",
-        "parameterTypes": [
-          "boolean"
-        ]
       },
       {
         "name": "setRenameOnRotate",
-        "parameterTypes": [
-          "boolean"
-        ]
-      },
-      {
-        "name": "setIpv6Canonical",
         "parameterTypes": [
           "boolean"
         ]
@@ -5196,45 +5810,7 @@
         ]
       },
       {
-        "name": "getSuffix",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "isEnabled",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getDirectory",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getMaxDays",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "setDirectory",
-        "parameterTypes": [
-          "java.lang.String"
-        ]
-      },
-      {
-        "name": "setLocale",
-        "parameterTypes": [
-          "java.lang.String"
-        ]
-      },
-      {
-        "name": "setRequestAttributesEnabled",
-        "parameterTypes": [
-          "boolean"
-        ]
-      },
-      {
-        "name": "isRequestAttributesEnabled",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "setFileDateFormat",
+        "name": "setConditionUnless",
         "parameterTypes": [
           "java.lang.String"
         ]
@@ -5246,9 +5822,29 @@
         ]
       },
       {
-        "name": "setPrefix",
+        "name": "getEncoding",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "isBuffered",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getConditionIf",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getLocale",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getPattern",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setIpv6Canonical",
         "parameterTypes": [
-          "java.lang.String"
+          "boolean"
         ]
       },
       {
@@ -5256,6 +5852,111 @@
         "parameterTypes": [
           "java.lang.String"
         ]
+      },
+      {
+        "name": "getSuffix",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "isRequestAttributesEnabled",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "isRotate",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getMaxDays",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "isIpv6Canonical",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setMaxDays",
+        "parameterTypes": [
+          "int"
+        ]
+      },
+      {
+        "name": "setRotate",
+        "parameterTypes": [
+          "boolean"
+        ]
+      },
+      {
+        "name": "getFileDateFormat",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setRequestAttributesEnabled",
+        "parameterTypes": [
+          "boolean"
+        ]
+      },
+      {
+        "name": "setDirectory",
+        "parameterTypes": [
+          "java.lang.String"
+        ]
+      },
+      {
+        "name": "setSuffix",
+        "parameterTypes": [
+          "java.lang.String"
+        ]
+      },
+      {
+        "name": "isCheckExists",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setFileDateFormat",
+        "parameterTypes": [
+          "java.lang.String"
+        ]
+      },
+      {
+        "name": "getPrefix",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setLocale",
+        "parameterTypes": [
+          "java.lang.String"
+        ]
+      },
+      {
+        "name": "setEnabled",
+        "parameterTypes": [
+          "boolean"
+        ]
+      },
+      {
+        "name": "setEncoding",
+        "parameterTypes": [
+          "java.lang.String"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "org.springframework.data.domain.Sort",
+    "allDeclaredConstructors": true,
+    "allDeclaredFields": true,
+    "methods": [
+      {
+        "name": "isEmpty",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "isSorted",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "isUnsorted",
+        "parameterTypes": [ ]
       }
     ]
   },
@@ -5275,16 +5976,6 @@
         "parameterTypes": [ ]
       },
       {
-        "name": "getPrefix",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "setSuffix",
-        "parameterTypes": [
-          "java.lang.String"
-        ]
-      },
-      {
         "name": "setPrefix",
         "parameterTypes": [
           "java.lang.String"
@@ -5293,6 +5984,16 @@
       {
         "name": "getSuffix",
         "parameterTypes": [ ]
+      },
+      {
+        "name": "getPrefix",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setSuffix",
+        "parameterTypes": [
+          "java.lang.String"
+        ]
       }
     ]
   },
@@ -5307,6 +6008,12 @@
     },
     "methods": [
       {
+        "name": "setBufferRequestBody",
+        "parameterTypes": [
+          "boolean"
+        ]
+      },
+      {
         "name": "setConnectTimeout",
         "parameterTypes": [
           "int"
@@ -5317,14 +6024,13 @@
         "parameterTypes": [
           "int"
         ]
-      },
-      {
-        "name": "setBufferRequestBody",
-        "parameterTypes": [
-          "boolean"
-        ]
       }
     ]
+  },
+  {
+    "name": "org.springframework.data.domain.ScrollPosition$Direction",
+    "allDeclaredConstructors": true,
+    "allDeclaredFields": true
   },
   {
     "name": "org.springframework.boot.test.mock.mockito.MockitoPostProcessor",
@@ -5347,6 +6053,11 @@
     "queryAllDeclaredMethods": true
   },
   {
+    "name": "org.aopalliance.intercept.MethodInterceptor",
+    "allDeclaredConstructors": true,
+    "allDeclaredFields": true
+  },
+  {
     "name": "org.springframework.boot.autoconfigure.transaction.TransactionProperties",
     "queryAllDeclaredMethods": true,
     "methods": [
@@ -5359,6 +6070,12 @@
         "parameterTypes": [ ]
       },
       {
+        "name": "setRollbackOnCommitFailure",
+        "parameterTypes": [
+          "java.lang.Boolean"
+        ]
+      },
+      {
         "name": "setDefaultTimeout",
         "parameterTypes": [
           "java.time.Duration"
@@ -5367,12 +6084,6 @@
       {
         "name": "getRollbackOnCommitFailure",
         "parameterTypes": [ ]
-      },
-      {
-        "name": "setRollbackOnCommitFailure",
-        "parameterTypes": [
-          "java.lang.Boolean"
-        ]
       }
     ]
   },
@@ -5406,20 +6117,126 @@
         "parameterTypes": [ ]
       },
       {
-        "name": "setBundle",
+        "name": "getTrustCertificate",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setTrustCertificate",
         "parameterTypes": [
           "java.lang.String"
         ]
       },
       {
-        "name": "getKeyStoreProvider",
+        "name": "getKeyStorePassword",
         "parameterTypes": [ ]
+      },
+      {
+        "name": "getClientAuth",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getKeyAlias",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setKeyPassword",
+        "parameterTypes": [
+          "java.lang.String"
+        ]
+      },
+      {
+        "name": "getCertificate",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setEnabledProtocols",
+        "parameterTypes": [
+          "java.lang.String[]"
+        ]
       },
       {
         "name": "setKeyStorePassword",
         "parameterTypes": [
           "java.lang.String"
         ]
+      },
+      {
+        "name": "isEnabled",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getTrustCertificatePrivateKey",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setKeyAlias",
+        "parameterTypes": [
+          "java.lang.String"
+        ]
+      },
+      {
+        "name": "getEnabledProtocols",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getKeyStore",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setBundle",
+        "parameterTypes": [
+          "java.lang.String"
+        ]
+      },
+      {
+        "name": "setKeyStoreType",
+        "parameterTypes": [
+          "java.lang.String"
+        ]
+      },
+      {
+        "name": "setEnabled",
+        "parameterTypes": [
+          "boolean"
+        ]
+      },
+      {
+        "name": "getKeyStoreType",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setTrustStoreType",
+        "parameterTypes": [
+          "java.lang.String"
+        ]
+      },
+      {
+        "name": "setTrustStorePassword",
+        "parameterTypes": [
+          "java.lang.String"
+        ]
+      },
+      {
+        "name": "getTrustStoreProvider",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setTrustStore",
+        "parameterTypes": [
+          "java.lang.String"
+        ]
+      },
+      {
+        "name": "getKeyPassword",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getCertificatePrivateKey",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getCiphers",
+        "parameterTypes": [ ]
       },
       {
         "name": "setTrustStoreProvider",
@@ -5432,7 +6249,37 @@
         "parameterTypes": [ ]
       },
       {
-        "name": "getCertificatePrivateKey",
+        "name": "setClientAuth",
+        "parameterTypes": [
+          "org.springframework.boot.web.server.Ssl$ClientAuth"
+        ]
+      },
+      {
+        "name": "getProtocol",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getKeyStoreProvider",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setProtocol",
+        "parameterTypes": [
+          "java.lang.String"
+        ]
+      },
+      {
+        "name": "setKeyStoreProvider",
+        "parameterTypes": [
+          "java.lang.String"
+        ]
+      },
+      {
+        "name": "getTrustStoreType",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getTrustStorePassword",
         "parameterTypes": [ ]
       },
       {
@@ -5442,121 +6289,7 @@
         ]
       },
       {
-        "name": "getCiphers",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "setKeyPassword",
-        "parameterTypes": [
-          "java.lang.String"
-        ]
-      },
-      {
-        "name": "getTrustCertificate",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "setEnabled",
-        "parameterTypes": [
-          "boolean"
-        ]
-      },
-      {
-        "name": "setKeyStoreType",
-        "parameterTypes": [
-          "java.lang.String"
-        ]
-      },
-      {
-        "name": "setEnabledProtocols",
-        "parameterTypes": [
-          "java.lang.String[]"
-        ]
-      },
-      {
-        "name": "getCertificate",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getClientAuth",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getKeyPassword",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getTrustStoreType",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "setCertificatePrivateKey",
-        "parameterTypes": [
-          "java.lang.String"
-        ]
-      },
-      {
-        "name": "setKeyAlias",
-        "parameterTypes": [
-          "java.lang.String"
-        ]
-      },
-      {
-        "name": "setTrustCertificatePrivateKey",
-        "parameterTypes": [
-          "java.lang.String"
-        ]
-      },
-      {
-        "name": "getKeyAlias",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getKeyStore",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "setKeyStoreProvider",
-        "parameterTypes": [
-          "java.lang.String"
-        ]
-      },
-      {
-        "name": "setClientAuth",
-        "parameterTypes": [
-          "org.springframework.boot.web.server.Ssl$ClientAuth"
-        ]
-      },
-      {
-        "name": "getKeyStorePassword",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "setTrustStoreType",
-        "parameterTypes": [
-          "java.lang.String"
-        ]
-      },
-      {
-        "name": "getTrustStorePassword",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "setCiphers",
-        "parameterTypes": [
-          "java.lang.String[]"
-        ]
-      },
-      {
-        "name": "getEnabledProtocols",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "isEnabled",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getProtocol",
+        "name": "getTrustStore",
         "parameterTypes": [ ]
       },
       {
@@ -5566,44 +6299,22 @@
         ]
       },
       {
-        "name": "getTrustCertificatePrivateKey",
-        "parameterTypes": [ ]
+        "name": "setCiphers",
+        "parameterTypes": [
+          "java.lang.String[]"
+        ]
       },
       {
-        "name": "setTrustCertificate",
+        "name": "setTrustCertificatePrivateKey",
         "parameterTypes": [
           "java.lang.String"
         ]
       },
       {
-        "name": "setTrustStorePassword",
+        "name": "setCertificatePrivateKey",
         "parameterTypes": [
           "java.lang.String"
         ]
-      },
-      {
-        "name": "setProtocol",
-        "parameterTypes": [
-          "java.lang.String"
-        ]
-      },
-      {
-        "name": "setTrustStore",
-        "parameterTypes": [
-          "java.lang.String"
-        ]
-      },
-      {
-        "name": "getKeyStoreType",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getTrustStoreProvider",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getTrustStore",
-        "parameterTypes": [ ]
       }
     ]
   },
@@ -5623,18 +6334,10 @@
         "parameterTypes": [ ]
       },
       {
-        "name": "setEnabled",
+        "name": "setCompressed",
         "parameterTypes": [
           "boolean"
         ]
-      },
-      {
-        "name": "getEnabled",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getStrategy",
-        "parameterTypes": [ ]
       },
       {
         "name": "isCache",
@@ -5647,20 +6350,38 @@
         ]
       },
       {
+        "name": "getStrategy",
+        "parameterTypes": [ ]
+      },
+      {
         "name": "isCompressed",
         "parameterTypes": [ ]
       },
       {
-        "name": "setCompressed",
+        "name": "setEnabled",
         "parameterTypes": [
           "boolean"
         ]
+      },
+      {
+        "name": "getEnabled",
+        "parameterTypes": [ ]
       }
     ]
   },
   {
+    "name": "org.springframework.data.util.MethodInvocationRecorder$PropertyNameDetectionStrategy",
+    "allDeclaredConstructors": true,
+    "allDeclaredFields": true
+  },
+  {
     "name": "com.mongodb.MongoClientSettings",
     "queryAllDeclaredMethods": true
+  },
+  {
+    "name": "org.springframework.data.domain.ExampleMatcher$MatchMode",
+    "allDeclaredConstructors": true,
+    "allDeclaredFields": true
   },
   {
     "name": "org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor",
@@ -5675,17 +6396,17 @@
         "parameterTypes": [ ]
       },
       {
+        "name": "restTemplateBuilder",
+        "parameterTypes": [
+          "org.springframework.boot.autoconfigure.web.client.RestTemplateBuilderConfigurer"
+        ]
+      },
+      {
         "name": "restTemplateBuilderConfigurer",
         "parameterTypes": [
           "org.springframework.beans.factory.ObjectProvider",
           "org.springframework.beans.factory.ObjectProvider",
           "org.springframework.beans.factory.ObjectProvider"
-        ]
-      },
-      {
-        "name": "restTemplateBuilder",
-        "parameterTypes": [
-          "org.springframework.boot.autoconfigure.web.client.RestTemplateBuilderConfigurer"
         ]
       }
     ]
@@ -5693,6 +6414,17 @@
   {
     "name": "org.springframework.boot.context.properties.NotConstructorBoundInjectionFailureAnalyzer",
     "allDeclaredConstructors": true
+  },
+  {
+    "name": "org.springframework.data.util.MethodInvocationRecorder$Recorded",
+    "allDeclaredConstructors": true,
+    "allDeclaredFields": true,
+    "methods": [
+      {
+        "name": "getPropertyPath",
+        "parameterTypes": [ ]
+      }
+    ]
   },
   {
     "name": "org.springframework.boot.context.config.ConfigDataLoader",
@@ -5733,6 +6465,12 @@
         "parameterTypes": [ ]
       },
       {
+        "name": "setEnabled",
+        "parameterTypes": [
+          "boolean"
+        ]
+      },
+      {
         "name": "getVersion",
         "parameterTypes": [ ]
       },
@@ -5743,20 +6481,14 @@
         ]
       },
       {
-        "name": "getPaths",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "setEnabled",
-        "parameterTypes": [
-          "boolean"
-        ]
-      },
-      {
         "name": "setVersion",
         "parameterTypes": [
           "java.lang.String"
         ]
+      },
+      {
+        "name": "getPaths",
+        "parameterTypes": [ ]
       },
       {
         "name": "isEnabled",
@@ -5784,14 +6516,14 @@
         "parameterTypes": [ ]
       },
       {
+        "name": "getMatchingStrategy",
+        "parameterTypes": [ ]
+      },
+      {
         "name": "setMatchingStrategy",
         "parameterTypes": [
           "org.springframework.boot.autoconfigure.web.servlet.WebMvcProperties$MatchingStrategy"
         ]
-      },
-      {
-        "name": "getMatchingStrategy",
-        "parameterTypes": [ ]
       }
     ]
   },
@@ -5803,15 +6535,15 @@
     "name": "org.springframework.boot.autoconfigure.ssl.SslBundleProperties",
     "methods": [
       {
+        "name": "getOptions",
+        "parameterTypes": [ ]
+      },
+      {
         "name": "getProtocol",
         "parameterTypes": [ ]
       },
       {
         "name": "getKey",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getOptions",
         "parameterTypes": [ ]
       },
       {
@@ -5843,7 +6575,7 @@
         ]
       },
       {
-        "name": "getContentType",
+        "name": "isProducePartialOutputWhileProcessing",
         "parameterTypes": [ ]
       },
       {
@@ -5853,7 +6585,7 @@
         ]
       },
       {
-        "name": "isProducePartialOutputWhileProcessing",
+        "name": "getContentType",
         "parameterTypes": [ ]
       }
     ]
@@ -5871,12 +6603,30 @@
     "queryAllDeclaredMethods": true
   },
   {
+    "name": "org.springframework.data.domain.ExampleMatcher$GenericPropertyMatcher",
+    "allDeclaredConstructors": true,
+    "allDeclaredFields": true
+  },
+  {
+    "name": "org.springframework.data.mongodb.repository.config.MongoRepositoryConfigurationExtension",
+    "queryAllDeclaredMethods": true,
+    "queriedMethods": [
+      {
+        "name": "<init>",
+        "parameterTypes": [ ]
+      }
+    ]
+  },
+  {
     "name": "org.springframework.boot.logging.java.JavaLoggingSystem$Factory",
     "allDeclaredConstructors": true
   },
   {
     "name": "org.springframework.util.PathMatcher",
     "queryAllDeclaredMethods": true
+  },
+  {
+    "name": "java.util.Set"
   },
   {
     "name": "org.springframework.boot.diagnostics.analyzer.InvalidConfigurationPropertyValueFailureAnalyzer",
@@ -5893,6 +6643,10 @@
         ]
       },
       {
+        "name": "errorAttributes",
+        "parameterTypes": [ ]
+      },
+      {
         "name": "basicErrorController",
         "parameterTypes": [
           "org.springframework.boot.web.servlet.error.ErrorAttributes",
@@ -5900,26 +6654,22 @@
         ]
       },
       {
-        "name": "errorPageCustomizer",
-        "parameterTypes": [
-          "org.springframework.boot.autoconfigure.web.servlet.DispatcherServletPath"
-        ]
-      },
-      {
         "name": "preserveErrorControllerTargetClassPostProcessor",
         "parameterTypes": [ ]
       },
       {
-        "name": "errorAttributes",
-        "parameterTypes": [ ]
+        "name": "errorPageCustomizer",
+        "parameterTypes": [
+          "org.springframework.boot.autoconfigure.web.servlet.DispatcherServletPath"
+        ]
       }
     ]
   },
   {
     "name": "com.jump2digital.challenge.v1.V1Application$$SpringCGLIB$$0",
-    "allDeclaredFields": true,
-    "allDeclaredConstructors": true,
     "allDeclaredMethods": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredFields": true,
     "queriedMethods": [
       {
         "name": "<init>",
@@ -5954,6 +6704,21 @@
     "queryAllDeclaredMethods": true
   },
   {
+    "name": "org.springframework.data.util.Streamable",
+    "allDeclaredConstructors": true,
+    "allDeclaredFields": true,
+    "methods": [
+      {
+        "name": "isEmpty",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "get",
+        "parameterTypes": [ ]
+      }
+    ]
+  },
+  {
     "name": "org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter",
     "queryAllDeclaredMethods": true
   },
@@ -5983,17 +6748,23 @@
         "parameterTypes": [ ]
       },
       {
-        "name": "getType",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "setPassword",
+        "name": "setLocation",
         "parameterTypes": [
           "java.lang.String"
         ]
       },
       {
-        "name": "setType",
+        "name": "setProvider",
+        "parameterTypes": [
+          "java.lang.String"
+        ]
+      },
+      {
+        "name": "getProvider",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setPassword",
         "parameterTypes": [
           "java.lang.String"
         ]
@@ -6007,22 +6778,21 @@
         "parameterTypes": [ ]
       },
       {
-        "name": "getProvider",
+        "name": "getType",
         "parameterTypes": [ ]
       },
       {
-        "name": "setLocation",
-        "parameterTypes": [
-          "java.lang.String"
-        ]
-      },
-      {
-        "name": "setProvider",
+        "name": "setType",
         "parameterTypes": [
           "java.lang.String"
         ]
       }
     ]
+  },
+  {
+    "name": "org.springframework.data.util.MethodInvocationRecorder$Recorded$ToCollectionConverter",
+    "allDeclaredConstructors": true,
+    "allDeclaredFields": true
   },
   {
     "name": "org.springframework.data.mongodb.core.convert.MongoCustomConversions",
@@ -6052,35 +6822,27 @@
         "parameterTypes": [ ]
       },
       {
-        "name": "getEncoding",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getContextParameters",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getJsp",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "setApplicationDisplayName",
-        "parameterTypes": [
-          "java.lang.String"
-        ]
-      },
-      {
         "name": "isRegisterDefaultServlet",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getContextPath",
         "parameterTypes": [ ]
       },
       {
         "name": "setRegisterDefaultServlet",
         "parameterTypes": [
           "boolean"
+        ]
+      },
+      {
+        "name": "getJsp",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getSession",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setApplicationDisplayName",
+        "parameterTypes": [
+          "java.lang.String"
         ]
       },
       {
@@ -6094,7 +6856,15 @@
         "parameterTypes": [ ]
       },
       {
-        "name": "getSession",
+        "name": "getContextParameters",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getEncoding",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getContextPath",
         "parameterTypes": [ ]
       }
     ]
@@ -6111,23 +6881,11 @@
         "parameterTypes": [ ]
       },
       {
-        "name": "setProtocolHeader",
-        "parameterTypes": [
-          "java.lang.String"
-        ]
-      },
-      {
-        "name": "getInternalProxies",
+        "name": "getProtocolHeaderHttpsValue",
         "parameterTypes": [ ]
       },
       {
-        "name": "setHostHeader",
-        "parameterTypes": [
-          "java.lang.String"
-        ]
-      },
-      {
-        "name": "setRemoteIpHeader",
+        "name": "setPortHeader",
         "parameterTypes": [
           "java.lang.String"
         ]
@@ -6137,15 +6895,17 @@
         "parameterTypes": [ ]
       },
       {
-        "name": "getProtocolHeader",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getProtocolHeaderHttpsValue",
-        "parameterTypes": [ ]
-      },
-      {
         "name": "setTrustedProxies",
+        "parameterTypes": [
+          "java.lang.String"
+        ]
+      },
+      {
+        "name": "getHostHeader",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setProtocolHeader",
         "parameterTypes": [
           "java.lang.String"
         ]
@@ -6157,13 +6917,27 @@
         ]
       },
       {
-        "name": "setPortHeader",
+        "name": "setHostHeader",
         "parameterTypes": [
           "java.lang.String"
         ]
       },
       {
-        "name": "getHostHeader",
+        "name": "setInternalProxies",
+        "parameterTypes": [
+          "java.lang.String"
+        ]
+      },
+      {
+        "name": "getPortHeader",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getProtocolHeader",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getInternalProxies",
         "parameterTypes": [ ]
       },
       {
@@ -6171,11 +6945,7 @@
         "parameterTypes": [ ]
       },
       {
-        "name": "getPortHeader",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "setInternalProxies",
+        "name": "setRemoteIpHeader",
         "parameterTypes": [
           "java.lang.String"
         ]
@@ -6194,9 +6964,9 @@
         "parameterTypes": [ ]
       },
       {
-        "name": "setMapping",
+        "name": "setCharset",
         "parameterTypes": [
-          "java.util.Map"
+          "java.nio.charset.Charset"
         ]
       },
       {
@@ -6204,9 +6974,9 @@
         "parameterTypes": [ ]
       },
       {
-        "name": "setForceResponse",
+        "name": "setMapping",
         "parameterTypes": [
-          "boolean"
+          "java.util.Map"
         ]
       },
       {
@@ -6216,25 +6986,21 @@
         ]
       },
       {
-        "name": "getMapping",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "setCharset",
+        "name": "setForceResponse",
         "parameterTypes": [
-          "java.nio.charset.Charset"
+          "boolean"
         ]
-      },
-      {
-        "name": "isForce",
-        "parameterTypes": [ ]
       },
       {
         "name": "isForceRequest",
         "parameterTypes": [ ]
       },
       {
-        "name": "isForceResponse",
+        "name": "isForce",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getMapping",
         "parameterTypes": [ ]
       },
       {
@@ -6242,6 +7008,10 @@
         "parameterTypes": [
           "boolean"
         ]
+      },
+      {
+        "name": "isForceResponse",
+        "parameterTypes": [ ]
       }
     ]
   },
@@ -6293,58 +7063,26 @@
         "parameterTypes": [ ]
       },
       {
-        "name": "setDefaultPropertyInclusion",
-        "parameterTypes": [
-          "com.fasterxml.jackson.annotation.JsonInclude$Include"
-        ]
-      },
-      {
         "name": "getLocale",
         "parameterTypes": [ ]
-      },
-      {
-        "name": "getMapper",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getTimeZone",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "setPropertyNamingStrategy",
-        "parameterTypes": [
-          "java.lang.String"
-        ]
-      },
-      {
-        "name": "setLocale",
-        "parameterTypes": [
-          "java.util.Locale"
-        ]
-      },
-      {
-        "name": "getDefaultPropertyInclusion",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "setConstructorDetector",
-        "parameterTypes": [
-          "org.springframework.boot.autoconfigure.jackson.JacksonProperties$ConstructorDetectorStrategy"
-        ]
       },
       {
         "name": "getPropertyNamingStrategy",
         "parameterTypes": [ ]
       },
       {
-        "name": "getConstructorDetector",
+        "name": "getGenerator",
         "parameterTypes": [ ]
       },
       {
-        "name": "setTimeZone",
+        "name": "setDateFormat",
         "parameterTypes": [
-          "java.util.TimeZone"
+          "java.lang.String"
         ]
+      },
+      {
+        "name": "getVisibility",
+        "parameterTypes": [ ]
       },
       {
         "name": "getDefaultLeniency",
@@ -6357,33 +7095,65 @@
         ]
       },
       {
-        "name": "getParser",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getSerialization",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getVisibility",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getDateFormat",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "setDateFormat",
+        "name": "setLocale",
         "parameterTypes": [
-          "java.lang.String"
+          "java.util.Locale"
         ]
+      },
+      {
+        "name": "setTimeZone",
+        "parameterTypes": [
+          "java.util.TimeZone"
+        ]
+      },
+      {
+        "name": "getDefaultPropertyInclusion",
+        "parameterTypes": [ ]
       },
       {
         "name": "getDeserialization",
         "parameterTypes": [ ]
       },
       {
-        "name": "getGenerator",
+        "name": "getConstructorDetector",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getParser",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setConstructorDetector",
+        "parameterTypes": [
+          "org.springframework.boot.autoconfigure.jackson.JacksonProperties$ConstructorDetectorStrategy"
+        ]
+      },
+      {
+        "name": "getTimeZone",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getMapper",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setDefaultPropertyInclusion",
+        "parameterTypes": [
+          "com.fasterxml.jackson.annotation.JsonInclude$Include"
+        ]
+      },
+      {
+        "name": "getSerialization",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setPropertyNamingStrategy",
+        "parameterTypes": [
+          "java.lang.String"
+        ]
+      },
+      {
+        "name": "getDateFormat",
         "parameterTypes": [ ]
       }
     ]
@@ -6411,6 +7181,11 @@
     "allDeclaredConstructors": true
   },
   {
+    "name": "org.springframework.data.util.MethodInvocationRecorder$Unrecorded",
+    "allDeclaredConstructors": true,
+    "allDeclaredFields": true
+  },
+  {
     "name": "org.springframework.test.context.support.DirtiesContextTestExecutionListener",
     "allDeclaredConstructors": true
   },
@@ -6435,14 +7210,14 @@
         "parameterTypes": [ ]
       },
       {
+        "name": "isEnabled",
+        "parameterTypes": [ ]
+      },
+      {
         "name": "setEnabled",
         "parameterTypes": [
           "boolean"
         ]
-      },
-      {
-        "name": "isEnabled",
-        "parameterTypes": [ ]
       }
     ]
   },
@@ -6485,6 +7260,21 @@
   {
     "name": "org.springframework.boot.test.mock.mockito.MockitoContextCustomizerFactory",
     "allDeclaredConstructors": true
+  },
+  {
+    "name": "org.springframework.data.util.MethodInvocationRecorder$InvocationInformation",
+    "allDeclaredConstructors": true,
+    "allDeclaredFields": true,
+    "methods": [
+      {
+        "name": "getInvokedMethod",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getRecorded",
+        "parameterTypes": [ ]
+      }
+    ]
   },
   {
     "name": "org.springframework.boot.SpringBootExceptionReporter",
@@ -6568,9 +7358,16 @@
     ]
   },
   {
+    "name": "java.util.Optional"
+  },
+  {
     "name": "java.lang.Throwable",
     "allDeclaredConstructors": true,
     "allDeclaredFields": true
+  },
+  {
+    "name": "com.jump2digital.challenge.v1.repository.PlayerSkinRepository",
+    "allPublicMethods": true
   },
   {
     "name": "org.springframework.boot.autoconfigure.data.web.SpringDataWebAutoConfiguration",
@@ -6628,17 +7425,17 @@
         "parameterTypes": [ ]
       },
       {
-        "name": "getBucket",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "setBucket",
+        "name": "setDatabase",
         "parameterTypes": [
           "java.lang.String"
         ]
       },
       {
-        "name": "setDatabase",
+        "name": "getBucket",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setBucket",
         "parameterTypes": [
           "java.lang.String"
         ]
@@ -6720,6 +7517,16 @@
         "parameterTypes": [ ]
       },
       {
+        "name": "getCachecontrol",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "setUseLastModified",
+        "parameterTypes": [
+          "boolean"
+        ]
+      },
+      {
         "name": "isUseLastModified",
         "parameterTypes": [ ]
       },
@@ -6730,18 +7537,8 @@
         ]
       },
       {
-        "name": "getCachecontrol",
-        "parameterTypes": [ ]
-      },
-      {
         "name": "getPeriod",
         "parameterTypes": [ ]
-      },
-      {
-        "name": "setUseLastModified",
-        "parameterTypes": [
-          "boolean"
-        ]
       }
     ]
   },
@@ -6776,23 +7573,23 @@
         "parameterTypes": [ ]
       },
       {
-        "name": "setEnabled",
-        "parameterTypes": [
-          "boolean"
-        ]
-      },
-      {
-        "name": "isEnabled",
-        "parameterTypes": [ ]
-      },
-      {
         "name": "setBundle",
         "parameterTypes": [
           "java.lang.String"
         ]
       },
       {
+        "name": "setEnabled",
+        "parameterTypes": [
+          "boolean"
+        ]
+      },
+      {
         "name": "getBundle",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "isEnabled",
         "parameterTypes": [ ]
       }
     ]
@@ -6834,6 +7631,17 @@
     "allDeclaredConstructors": true
   },
   {
+    "name": "org.aopalliance.intercept.MethodInvocation",
+    "allDeclaredConstructors": true,
+    "allDeclaredFields": true,
+    "methods": [
+      {
+        "name": "getMethod",
+        "parameterTypes": [ ]
+      }
+    ]
+  },
+  {
     "name": "org.springframework.boot.autoconfigure.ssl.SslBundleProperties$Options",
     "methods": [
       {
@@ -6841,10 +7649,8 @@
         "parameterTypes": [ ]
       },
       {
-        "name": "setEnabledProtocols",
-        "parameterTypes": [
-          "java.util.Set"
-        ]
+        "name": "getCiphers",
+        "parameterTypes": [ ]
       },
       {
         "name": "setCiphers",
@@ -6857,18 +7663,29 @@
         "parameterTypes": [ ]
       },
       {
-        "name": "getCiphers",
-        "parameterTypes": [ ]
+        "name": "setEnabledProtocols",
+        "parameterTypes": [
+          "java.util.Set"
+        ]
       }
     ]
   },
   {
-    "name": "org.springframework.data.repository.core.support.RepositoryFragmentsFactoryBean",
-    "allPublicMethods": true
-  },
-  {
     "name": "org.springframework.web.method.support.CompositeUriComponentsContributor",
     "queryAllDeclaredMethods": true
+  },
+  {
+    "name": "org.springframework.data.repository.core.support.RepositoryFragmentsFactoryBean",
+    "allPublicMethods": true,
+    "queryAllDeclaredMethods": true,
+    "queriedMethods": [
+      {
+        "name": "<init>",
+        "parameterTypes": [
+          "java.util.List"
+        ]
+      }
+    ]
   },
   {
     "name": "org.springframework.boot.autoconfigure.web.servlet.ServletWebServerFactoryConfiguration$EmbeddedTomcat",
@@ -6897,6 +7714,37 @@
     "allDeclaredConstructors": true
   },
   {
+    "name": "org.springframework.data.domain.Pageable",
+    "allDeclaredConstructors": true,
+    "allDeclaredFields": true,
+    "methods": [
+      {
+        "name": "getPageSize",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "isUnpaged",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getSort",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "isPaged",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getPageNumber",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getOffset",
+        "parameterTypes": [ ]
+      }
+    ]
+  },
+  {
     "name": "org.springframework.boot.web.servlet.server.Session",
     "methods": [
       {
@@ -6910,7 +7758,17 @@
         ]
       },
       {
-        "name": "getTimeout",
+        "name": "setTrackingModes",
+        "parameterTypes": [
+          "java.util.Set"
+        ]
+      },
+      {
+        "name": "getSessionStoreDirectory",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getCookie",
         "parameterTypes": [ ]
       },
       {
@@ -6920,18 +7778,16 @@
         ]
       },
       {
-        "name": "getCookie",
+        "name": "isPersistent",
         "parameterTypes": [ ]
       },
       {
-        "name": "getSessionStoreDirectory",
+        "name": "getStoreDir",
         "parameterTypes": [ ]
       },
       {
-        "name": "setTrackingModes",
-        "parameterTypes": [
-          "java.util.Set"
-        ]
+        "name": "getTimeout",
+        "parameterTypes": [ ]
       },
       {
         "name": "setPersistent",
@@ -6940,15 +7796,7 @@
         ]
       },
       {
-        "name": "getStoreDir",
-        "parameterTypes": [ ]
-      },
-      {
         "name": "getTrackingModes",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "isPersistent",
         "parameterTypes": [ ]
       }
     ]
@@ -6966,6 +7814,14 @@
         "parameterTypes": [ ]
       },
       {
+        "name": "getShutdown",
+        "parameterTypes": [ ]
+      },
+      {
+        "name": "getPool",
+        "parameterTypes": [ ]
+      },
+      {
         "name": "getThreadNamePrefix",
         "parameterTypes": [ ]
       },
@@ -6974,14 +7830,6 @@
         "parameterTypes": [
           "java.lang.String"
         ]
-      },
-      {
-        "name": "getPool",
-        "parameterTypes": [ ]
-      },
-      {
-        "name": "getShutdown",
-        "parameterTypes": [ ]
       }
     ]
   },

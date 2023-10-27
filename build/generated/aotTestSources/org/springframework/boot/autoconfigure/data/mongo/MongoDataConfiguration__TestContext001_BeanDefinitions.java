@@ -1,7 +1,7 @@
 package org.springframework.boot.autoconfigure.data.mongo;
 
+import com.jump2digital.challenge.v1.documents.PlayerSkin;
 import java.lang.Class;
-import java.util.Collections;
 import java.util.List;
 import org.springframework.beans.factory.aot.BeanInstanceSupplier;
 import org.springframework.beans.factory.config.BeanDefinition;
@@ -31,7 +31,7 @@ public class MongoDataConfiguration__TestContext001_BeanDefinitions {
    */
   private static InstanceSupplier<MongoManagedTypes> mongoManagedTypesInstance() {
     return (registeredBean ->  {
-      List<Class<?>> types = Collections.emptyList();
+      List<Class<?>> types = List.of(PlayerSkin.class);
       ManagedTypes managedTypes = ManagedTypes.fromIterable(types);
       return MongoManagedTypes.from(managedTypes);
     } );

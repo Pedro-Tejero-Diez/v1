@@ -10,7 +10,7 @@
 
 <body>
 <div class="container my-3">
-    <h1>PLAYER SKINS</h1>
+    <h1>PLAYER SKIN</h1>
     <h2>Change skin color: write the color you want and press button "change" </a></h2>
 
     <form th:action="@{/skins/color/{id} (id= ${playerskin.player_skin_id})}" method="post">
@@ -23,7 +23,6 @@
                 <th>Author</th>
                 <th>Price</th>
                 <th>Color</th>
-                <th>Change Color</th>
                 <th>Action</th>
             </tr>
             </thead>
@@ -37,7 +36,7 @@
                 <input type="text" name="newColor" th:value="${skin.color}" />
                 <button type="submit" class="btn btn-primary mx-2">Change Color</button>
             </td>
-            <td><a class="btn btn-danger mx-2" th:href="@{/skins/delete (id=${playerskin.player_skin_id})}"
+            <td><a class="btn btn-danger mx-2" th:href="@{/skins/delete/{id} (id=${playerskin.player_skin_id})}"
                    th:object="${playerskin}">Delete</a>
             </td>
             </tbody>

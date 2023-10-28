@@ -1,17 +1,15 @@
 package com.jump2digital.challenge.v1.controllers;
 
-import com.jump2digital.challenge.v1.documents.Skin;
 import com.jump2digital.challenge.v1.documents.PlayerSkin;
+import com.jump2digital.challenge.v1.documents.Skin;
 import com.jump2digital.challenge.v1.services.PlayerSkinServiceImp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.io.IOException;
 import java.util.List;
-import java.util.NoSuchElementException;
 import java.util.Optional;
 
 @Controller
@@ -30,13 +28,12 @@ public class PlayerSkinController {
     }
 
     @PostMapping("/buy")
-    public String butSkinPlayer(@RequestParam("skinId") String skinId) throws IOException {
+    public String buySkinPlayer(@RequestParam("skinId") String skinId) throws IOException {
         int skinIdAsInt = Integer.parseInt(skinId);
         playerskinservice.buySkinById(skinIdAsInt - 1);
         return "redirect:/skins/myskins";
     }
-
-
+    
     @GetMapping("/myskins")
     public String playerskinsscreen(Model model) {
         List<PlayerSkin> playerskins = playerskinservice.getAllPlayerSkin();
@@ -58,8 +55,7 @@ public class PlayerSkinController {
     @PostMapping("color/{id}")
     public String changeColor(@PathVariable(value = "id")
                               String player_skin_id,
-                              @ModelAttribute("newColor") String newcolor,
-                              Model model) {
+                              @ModelAttribute("newColor") String newcolor) {
         playerskinservice.updatePlayerSkinColor(player_skin_id, newcolor);
         return "success";
     }

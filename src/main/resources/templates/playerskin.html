@@ -9,10 +9,13 @@
 </head>
 
 <body>
-<div class="container my-3">
+<div class="container my-4">
     <h1>PLAYER SKIN</h1>
-    <h2>Change skin color: write the color you want and press button "change" </a></h2>
-
+    <div class="container my-4">
+        <hr>
+        <br class="row">
+    <h4><b>Change skin color:</b> write the color you want and press button "Change Color" </a></h4>
+        <hr>
     <form th:action="@{/skins/color/{id} (id= ${playerskin.player_skin_id})}" method="post">
         <table border="1" class="table table-striped table-bordered">
             <thead class="thead-dark">

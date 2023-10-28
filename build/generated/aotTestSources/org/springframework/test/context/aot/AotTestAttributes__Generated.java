@@ -13,7 +13,6 @@ public class AotTestAttributes__Generated {
     map.put("org.springframework.boot.test.context.SpringBootTestContextBootstrapper.SpringBootConfiguration.com.jump2digital.challenge.v1.V1ApplicationTests", "com.jump2digital.challenge.v1.V1Application");
     map.put("org.springframework.boot.test.context.SpringBootTestContextBootstrapper.SpringBootConfiguration.com.jump2digital.challenge.v1.testcontrollers.PlayerSkinControllerTest", "com.jump2digital.challenge.v1.V1Application");
     map.put("org.springframework.boot.test.context.SpringBootTestContextBootstrapper.SpringBootConfiguration.com.jump2digital.challenge.v1.testservices.PlayerSkinServiceImpTest", "com.jump2digital.challenge.v1.V1Application");
-    map.put("org.springframework.boot.test.context.SpringBootTestContextBootstrapper.SpringBootConfiguration.com.jump2digital.challenge.v1.testservices.PlayerSkinServiceTest", "com.jump2digital.challenge.v1.V1Application");
     map.put("org.springframework.boot.test.context.SpringBootTestContextBootstrapper.SpringBootConfiguration.com.jump2digital.challenge.v1.testrepository.PlayerSkinRepositoryTest", "com.jump2digital.challenge.v1.V1Application");
     return map;
   }

@@ -1,6 +1,5 @@
 package com.jump2digital.challenge.v1.services;
 
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
@@ -25,7 +24,7 @@ public class PlayerSkinServiceImp implements PlayerSkinService {
     PlayerSkinRepository playerskinrepository;
 
     public List<Skin> readJsonFile() throws IOException {
-        Resource resource = new ClassPathResource("skins.json");
+        Resource resource = new ClassPathResource("json/skins.json");
         ObjectMapper objectMapper = new ObjectMapper();
         InputStream inputStream = resource.getInputStream();
         return objectMapper.readValue(inputStream,

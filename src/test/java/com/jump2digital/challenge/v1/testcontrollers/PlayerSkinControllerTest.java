@@ -45,7 +45,7 @@ public class PlayerSkinControllerTest {
     @Test
     public void testBuySkinPlayer() throws IOException {
         int skinId = 1;
-        playerSkinController.butSkinPlayer(String.valueOf(skinId));
+        playerSkinController.buySkinPlayer(String.valueOf(skinId));
         Mockito.verify(playerSkinService).buySkinById(skinId - 1);
     }
 

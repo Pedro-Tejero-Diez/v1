@@ -16,10 +16,9 @@ public interface PlayerSkinService {
 
     void savePlayerSkin(PlayerSkin playerskin);
 
-
     void deletePlayerSkin(String playerSkin_id);
 
-    public PlayerSkin updatePlayerSkinColor(String playerSkinId, String newColor);
+    PlayerSkin updatePlayerSkinColor(String playerSkinId, String newColor);
 
 }
 

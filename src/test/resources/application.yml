@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: v1
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+  jmx:
+    enabled: true
+  data:
+    mongodb:
+      # host: localhost
+      # port: 27017
+      uri: mongodb://admin_challenge:BYBcMJEEWw5egRUo@localhost:27017/skins
+      uuid-representation: standard
+
+server:
+  port: 8762

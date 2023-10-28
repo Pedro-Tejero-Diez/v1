@@ -1,0 +1,96 @@
+[{
+  "_id": {
+    "$oid": "6538a19121fb8f148b13a52b"
+  },
+  "playerSkin": {
+    "_id": 4,
+    "name": "Neon Ninja",
+    "description": "A neon-clad ninja for the urban jungle.",
+    "author": "UrbanShadow",
+    "price": 800,
+    "color": "Neon Green"
+  },
+  "_class": "com.jump2digital.challenge.v1.documents.PlayerSkin"
+},
+{
+  "_id": {
+    "$oid": "65392e1cb1d4a3275f254766"
+  },
+  "playerSkin": {
+    "_id": 2,
+    "name": "Arctic partic",
+    "description": "Icy blue attire for North polar adventures.",
+    "author": "FrozenAdventures",
+    "price": 550,
+    "color": "Icy Blue"
+  },
+  "_class": "com.jump2digital.challenge.v1.documents.PlayerSkin"
+},
+{
+  "_id": {
+    "$oid": "65392feaed28e430f5b5fa4f"
+  },
+  "regdate": {
+    "$date": "2023-10-24T22:00:00.000Z"
+  },
+  "playerSkin": {
+    "_id": 10,
+    "name": "Galactic Explorer",
+    "description": "An astronaut exploring the galaxy.",
+    "author": "GalaxyExplorersInc",
+    "price": 900,
+    "color": "Silver"
+  },
+  "_class": "com.jump2digital.challenge.v1.documents.PlayerSkin"
+},
+{
+  "_id": {
+    "$oid": "653932d651dc4623d618fbc9"
+  },
+  "regdate": {
+    "$date": "2023-10-24T22:00:00.000Z"
+  },
+  "playerSkin": {
+    "_id": 8,
+    "name": "Space Pirate",
+    "description": "A swashbuckling space pirate outfit for interstellar adventures.",
+    "author": "CosmicPirates",
+    "price": 650,
+    "color": "Black and Red"
+  },
+  "_class": "com.jump2digital.challenge.v1.documents.PlayerSkin"
+},
+{
+  "_id": {
+    "$oid": "6539345d09835f4d1759d9a3"
+  },
+  "regdate": {
+    "$date": "2023-10-24T22:00:00.000Z"
+  },
+  "playerSkin": {
+    "_id": 4,
+    "name": "Neon Ninja",
+    "description": "A neon-clad ninja for the urban jungle.",
+    "author": "UrbanShadow",
+    "price": 800,
+    "color": "Neon Green"
+  },
+  "_class": "com.jump2digital.challenge.v1.documents.PlayerSkin"
+},
+{
+  "_id": {
+    "$oid": "653c84ab1b625879832a4c1b"
+  },
+  "regdate": {
+    "$date": "2023-10-27T22:00:00.000Z"
+  },
+  "playerSkin": {
+    "_id": 1,
+    "name": "Sleek Silver Sentinel",
+    "description": "A futuristic silver armor for high-tech battles.",
+    "author": "FuturisticDesigns",
+    "price": 600,
+    "color": "Silver"
+  },
+  "_class": "com.jump2digital.challenge.v1.documents.PlayerSkin"
+}]

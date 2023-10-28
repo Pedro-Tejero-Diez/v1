@@ -31,11 +31,4 @@ class SkinTest {
         assertEquals(10, skin.getPrice());
         assertEquals("Test Color", skin.getColor());
     }
-
-    /*@Test
-    public void testSkinToString() {
-        String expectedString = "Skin{id=1, name='Test Skin', description='Test Description', author='Test Author', price=10, color='Test Color'}";
-        assertEquals(expectedString, skin.toString());
-    }*/
 }
-

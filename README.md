@@ -21,8 +21,11 @@ Before you begin, ensure you have met the following requirements:
 
 ## Getting Started
 
-1. Clone the repository in your computer or Download the executable file from the project directory: ]*\v1\build\libsv1-snpashoot-o.1.jar*
+1. Clone the repository in your computer or Download the executable file from the project directory: 
+*\v1\build\libs/v1-snpashoot-o.1.jar*
+
 2. Open your MongoDB Atlas or console and create a database with the name "*skins*"
+
 3. Open a terminal window in your mongo database directory and create the following user: 
 
          db.createUser({
@@ -33,7 +36,7 @@ Before you begin, ensure you have met the following requirements:
          ]
          });
    
-4. Run the jar file  or  the main application from your IDE to initiate the service in your computer.
+4. Run the jar file (Open your console in the folder you have downloaded the jar file and type: *java -jar v1-snpashoot-o.1.jar*) or run the main application from your IDE to initiate the service in your computer.
 
 5. You can import the playerskin data example in **src/main/resources/json** for testing the service or create new ones using the web application by going to the /skins/available endpoint and buying player skins and test the other endpoints.
 
@@ -51,6 +54,6 @@ Before you begin, ensure you have met the following requirements:
         /skins/color/{id}:  in the previous endpoint, you can write the new color for your skin and press "change color" button to get to this endpoint
         /skins/delete/{id}: in the same way, if you press the "delete" button in the getone endpoint, the playerskin will be deleted from the players database
 
-2. To check any of this endpoints you have to introduce them in your navigator adding "localhost:8762" before the endpoint.
+2. *To check any of this endpoints you have to introduce them in your navigator adding "localhost:8762" before the endpoint.*
 
 

@@ -19,8 +19,8 @@ Before you begin, ensure you have met the following requirements:
 
 ## Getting Started
 
-1. Clone the repository in your computer or Download the executable file from the project directory: 
-*\v1\build\libs\v1-0.0.1-SNAPSHOT.jar*
+1. Clone the repository in your computer or Download the executable compressed file from the project root directory: 
+*v1-0.0.1-SNAPSHOT.jar*
 
 2. Open your MongoDB Atlas or console and create a database with the name "*skins*"
 
@@ -34,7 +34,7 @@ Before you begin, ensure you have met the following requirements:
          ]
          });
    
-4. Run the *JAR* file (Open your console in the folder you have downloaded the jar file and type: *java -jar v1-0.0.1-SNAPSHOT.jar*) or run the main application from your IDE to initiate the web application service in your computer.
+4. Decompressed and run the *JAR* file (Open your console in the folder you have downloaded the jar file and type: *java -jar v1-0.0.1-SNAPSHOT.jar*) or run the main application from your IDE to initiate the web application service in your computer.
 
 5. You can import the playerskin data example in **src/main/resources/json** for testing the service or *create new ones* using the web application by first going to the */skins/available* endpoint and buying player skins that will be added to the player skins database so that you will be able to test the other endpoints.
 

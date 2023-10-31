@@ -46,7 +46,7 @@ Before you begin, ensure you have met the following requirements:
 
     - */skins/myskins*: shows the  player bought skins and the posibilities of changing skin color (writing the new color name and pressing the "change color" button will make the change). And the posibility of deleting the skin from the playerskin database.
 
-    - other endpoints you can access from the web application  or if you know the id of the playersking are: 
+    - other endpoints you can access from the web application  or if you know the *id* of the player skin are: 
         
        - */skins/getone/{id}*: shows a specific player skin in a table where you can change the color or delete it.
        - */skins/color/{id}*:  in the previous endpoint, you can write the new color for your skin and press "change color" button to get to this endpoint

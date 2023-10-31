@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>jump2digital</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+
+<body>
+<div class="container my-4">
+    <h1>GAME SKINS</h1>
+    <hr>
+
+    <div class="container my-4">
+        <br class="row">
+    <table border="1" class="table table-striped table-bordered">
+        <thead class="thead-dark">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Author</th>
+            <th>Price</th>
+            <th>Color</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="Skin : ${skins}">
+            <td th:text="${Skin.id}"></td>
+            <td th:text="${Skin.name}"></td>
+            <td th:text="${Skin.description}"></td>
+            <td th:text="${Skin.author}"></td>
+            <td th:text="${Skin.price}"></td>
+            <td th:text="${Skin.color}"></td>
+            <td>
+            <form method="post" action="/skins/buy">
+                <button type="submit" class="btn btn-primary" name="skinId" th:value="${Skin.id}">BUY</button>
+            </form>
+            </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

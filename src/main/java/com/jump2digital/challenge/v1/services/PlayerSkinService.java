@@ -21,4 +21,3 @@ public interface PlayerSkinService {
     PlayerSkin updatePlayerSkinColor(String playerSkinId, String newColor);
 
 }
-

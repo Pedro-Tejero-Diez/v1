@@ -37,7 +37,6 @@ public class PlayerSkinServiceImp implements PlayerSkinService {
         playerskinrepository.save(new PlayerSkin(readJsonFile().get(skinId)));
     }
 
-
     @Override
     public List<PlayerSkin> getAllPlayerSkin() {
 
@@ -60,7 +59,6 @@ public class PlayerSkinServiceImp implements PlayerSkinService {
 
         return playerskinrepository.save(playerSkin);
     }
-
 
     public void savePlayerSkin(PlayerSkin playerskin) {
         PlayerSkinRepository.savePlayerSkin(playerskin);

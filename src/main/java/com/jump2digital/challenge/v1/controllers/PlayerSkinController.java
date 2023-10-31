@@ -33,7 +33,7 @@ public class PlayerSkinController {
         playerskinservice.buySkinById(skinIdAsInt - 1);
         return "redirect:/skins/myskins";
     }
-    
+
     @GetMapping("/myskins")
     public String playerskinsscreen(Model model) {
         List<PlayerSkin> playerskins = playerskinservice.getAllPlayerSkin();

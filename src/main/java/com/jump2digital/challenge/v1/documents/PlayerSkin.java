@@ -14,7 +14,7 @@ import org.springframework.data.mongodb.core.mapping.DocumentReference;
 @NoArgsConstructor
 @Getter
 @Setter
-@Document(collection="playerskins")
+@Document(collection = "playerskins")
 public class PlayerSkin {
 
     @Id
@@ -24,7 +24,7 @@ public class PlayerSkin {
 
     public PlayerSkin(Skin playerSkin) {
         this.playerSkin = playerSkin;
-        this.regdate= LocalDate.now();
+        this.regdate = LocalDate.now();
     }
 }
 

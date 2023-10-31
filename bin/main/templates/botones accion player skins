@@ -1,0 +1,16 @@
+    <td> <a class="btn btn-primary" th:href="@{/skins/getskin/{id} (id=${PlayerSkin.player_skin_id})}"
+                        th:object="${playerskins}">Select</a>
+                </td>
+                <td> <a class="btn btn-primary" th:href="@{/skins/color (id=${PlayerSkin.player_skin_id})}}"
+                        th:object="${Skin}">change color</a>
+                </td>
+                <td> <a class="btn btn-primary" th:href="@{/skins/delete{id} (id=${PlayerSkin.player_skin_id})}}"
+                        th:object="${Skin}">Delete</a>
+                </td>
+
+esto sería para ejercer una accion:
+    <td>
+    <form method="post" action="/skins/getskin/{id}">
+   <button type="submit" class="btn btn-primary" name="skinId" th:value="${PlayerSkin.player_skin_id}">Select</button>
+    </form>
+     </td>

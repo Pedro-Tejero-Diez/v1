@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>jump2digital</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+
+<body>
+<div class="container my-4">
+    <h1>PLAYER BOUGHT SKINS</h1>
+    <hr>
+
+    <div class="container my-4">
+        <br class="row">
+        <table border="1" class="table table-striped table-bordered">
+            <thead class="thead-dark">
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Author</th>
+                <th>Color</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="PlayerSkin : ${playerskins}">
+                <td th:text="${PlayerSkin.playerSkin.name}"></td>
+                <td th:text="${PlayerSkin.playerSkin.description}"></td>
+                <td th:text="${PlayerSkin.playerSkin.author}"></td>
+                <td th:text="${PlayerSkin.playerSkin.color}"></td>
+                <td> <a class="btn btn-primary" th:href="@{/skins/getskin/{id} (id=${PlayerSkin.player_skin_id})}"
+                        th:object="${playerskins}">Select</a>
+                </td>
+
+        </table>
+
+    </div>
+</body>
+
+</html>

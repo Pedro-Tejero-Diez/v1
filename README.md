@@ -34,15 +34,15 @@ Before you begin, ensure you have met the following requirements:
          ]
          });
    
-4. Decompressed and run the *JAR* file (Open your console in the folder you have downloaded the jar file and type: *java -jar v1-0.0.1-SNAPSHOT.jar*) or run the main application from your IDE to initiate the web application service in your computer.
+4. Decompress and run the *JAR* file (Open your console in the folder you have downloaded the jar file and type: *java -jar v1-0.0.1-SNAPSHOT.jar*) or run the main application from your IDE to initiate the web application service in your computer.
 
-5. You can import the playerskin data example in **src/main/resources/json** for testing the service or *create new ones* using the web application by first going to the */skins/available* endpoint and buying player skins that will be added to the player skins database so that you will be able to test the other endpoints.
+5. You can import the playerskin data example in **src/main/resources/json/skins.playerskins.json** for testing the service or *create new ones* using the web application by first going to the */skins/available* endpoint and buying player skins that will be added to the player skins database so that you will be able to test the other endpoints.
 
 
 ## Endpoints
 
 1. The web application has the following endpoints:
-    - */skins/available*: shows the list of skins with the posibility of buying them (button "buy")
+    - */skins/available*: shows the list of skins with the posibility of buying them (pressing button "buy" get to */skins/buy* endpoint)
 
     - */skins/myskins*: shows the  player bought skins and the posibilities of changing skin color (writing the new color name and pressing the "change color" button will make the change). And the posibility of deleting the skin from the playerskin database.
 
